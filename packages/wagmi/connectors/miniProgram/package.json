@@ -1,0 +1,5 @@
+{
+  "main": "../../dist/connectors/miniProgram.js",
+  "module": "../../dist/connectors/miniProgram.mjs",
+  "types": "../../dist/connectors/miniProgram.d.ts"
+}

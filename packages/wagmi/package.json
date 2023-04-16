@@ -1,0 +1,78 @@
+{
+  "name": "@pancakeswap/wagmi",
+  "version": "0.1.0",
+  "license": "WAGMIT",
+  "description": "wagmi adaptor for pancakeswap",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pancakeswap/pancake-frontend.git",
+    "directory": "packages/wagmi"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "prepublishOnly": "yarn run build",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+  },
+  "peerDependencies": {
+    "swr": "^2.0.1",
+    "wagmi": "^0.10.10",
+    "@wagmi/core": "^0.8.14",
+    "@blocto/sdk": "^0.3.1",
+    "@ethersproject/abi": "^5.0.0",
+    "@ethersproject/address": "^5.0.0",
+    "@ethersproject/bignumber": "^5.0.0",
+    "@ethersproject/bytes": "^5.0.0",
+    "@ethersproject/constants": "^5.0.0",
+    "@ethersproject/contracts": "^5.0.0",
+    "@ethersproject/providers": "^5.0.0",
+    "@ethersproject/strings": "^5.0.0",
+    "@ethersproject/units": "^5.0.0",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
+  },
+  "devDependencies": {
+    "@blocto/sdk": "^0.3.1",
+    "tsconfig": "*",
+    "tsup": "^6.2.3"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./connectors/miniProgram": {
+      "types": "./dist/connectors/miniProgram.d.ts",
+      "import": "./dist/connectors/miniProgram.mjs",
+      "require": "./dist/connectors/miniProgram.js"
+    },
+    "./connectors/binanceWallet": {
+      "types": "./dist/connectors/binanceWallet.d.ts",
+      "import": "./dist/connectors/binanceWallet.mjs",
+      "require": "./dist/connectors/binanceWallet.js"
+    },
+    "./connectors/blocto": {
+      "types": "./dist/connectors/blocto.d.ts",
+      "import": "./dist/connectors/blocto.mjs",
+      "require": "./dist/connectors/blocto.js"
+    },
+    "./connectors/trustWallet": {
+      "types": "./dist/connectors/trustWallet.d.ts",
+      "import": "./dist/connectors/trustWallet.mjs",
+      "require": "./dist/connectors/trustWallet.js"
+    }
+  },
+  "peerDependenciesMeta": {
+    "@blocto/sdk": {
+      "optional": true
+    },
+    "swr": {
+      "optional": true
+    }
+  }
+}
