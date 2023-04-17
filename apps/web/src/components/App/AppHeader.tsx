@@ -51,7 +51,7 @@ const AppHeader: React.FC<React.PropsWithChildren<Props>> = ({ title, subtitle, 
                 <NotificationDot show={expertMode}>
                   <GlobalSettings mode={SettingsMode.SWAP_LIQUIDITY} />
                 </NotificationDot>
-                <Transactions />
+                {/* <Transactions /> */}
               </Flex>
             )}
           </Flex>
