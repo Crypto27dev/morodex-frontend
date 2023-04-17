@@ -260,11 +260,11 @@ export const SmartSwapForm: React.FC<{ handleOutputSelect: (newCurrencyOutput: C
             commonBasesType={CommonBasesType.SWAP_LIMITORDER}
           />
 
-          {isAccessTokenSupported && inputCurrency?.isToken && (
+          {/* {isAccessTokenSupported && inputCurrency?.isToken && (
             <Box>
               <AccessRisk token={inputCurrency} />
             </Box>
-          )}
+          )} */}
 
           <AutoColumn justify="space-between">
             <AutoRow justify={isExpertMode ? 'space-between' : 'center'} style={{ padding: '0 1rem' }}>
@@ -298,11 +298,11 @@ export const SmartSwapForm: React.FC<{ handleOutputSelect: (newCurrencyOutput: C
             commonBasesType={CommonBasesType.SWAP_LIMITORDER}
           />
 
-          {isAccessTokenSupported && outputCurrency?.isToken && (
+          {/* {isAccessTokenSupported && outputCurrency?.isToken && (
             <Box>
               <AccessRisk token={outputCurrency} />
             </Box>
-          )}
+          )} */}
 
           {isSmartRouterBetter && !isStableSwapByDefault && (
             <AutoColumn>
@@ -406,7 +406,7 @@ export const SmartSwapForm: React.FC<{ handleOutputSelect: (newCurrencyOutput: C
           )}
         </Box>
       </Wrapper>
-      {!swapIsUnsupported ? (
+      {/* {!swapIsUnsupported ? (
         !showWrap &&
         tradeInfo && (
           <AdvancedSwapDetailsDropdown
@@ -423,7 +423,7 @@ export const SmartSwapForm: React.FC<{ handleOutputSelect: (newCurrencyOutput: C
         )
       ) : (
         <UnsupportedCurrencyFooter currencies={[currencies.INPUT, currencies.OUTPUT]} />
-      )}
+      )} */}
     </>
   )
 }

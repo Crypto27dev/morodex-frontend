@@ -203,7 +203,7 @@ export default function CurrencyInputPanel({
               {!disableCurrencySelect && <ChevronDownIcon />}
             </Flex>
           </CurrencySelectButton>
-          {token && tokenAddress ? (
+          {/* {token && tokenAddress ? (
             <Flex style={{ gap: '4px' }} ml="4px" alignItems="center">
               <CopyButton
                 width="16px"
@@ -222,7 +222,7 @@ export default function CurrencyInputPanel({
                 tokenLogo={token instanceof WrappedTokenInfo ? token.logoURI : undefined}
               />
             </Flex>
-          ) : null}
+          ) : null} */}
         </Flex>
         {account && (
           <Text

@@ -20,7 +20,7 @@ export const SwapInfo = ({ allowedSlippage, price, onSlippageClick }: SwapInfoTy
   return (
     <AutoColumn gap="sm" py="0" px="16px">
       <RowBetween alignItems="center">{price}</RowBetween>
-      <RowBetween alignItems="center">
+      {/* <RowBetween alignItems="center">
         <SwapInfoLabel>
           {t("Slippage Tolerance")}
           <IconButton scale="sm" variant="text" onClick={onSlippageClick}>
@@ -32,7 +32,7 @@ export const SwapInfo = ({ allowedSlippage, price, onSlippageClick }: SwapInfoTy
             {allowedSlippage / 100}%
           </Text>
         )}
-      </RowBetween>
+      </RowBetween> */}
     </AutoColumn>
   );
 };
