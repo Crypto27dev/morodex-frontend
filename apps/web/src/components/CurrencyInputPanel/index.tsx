@@ -24,7 +24,7 @@ const InputRow = styled.div<{ selected: boolean }>`
   justify-content: flex-end;
   padding: ${({ selected }) => (selected ? '0.75rem 0.5rem 0.75rem 1rem' : '0.75rem 0.75rem 0.75rem 1rem')};
 `
-const CurrencySelectButton = styled(Button).attrs({ variant: 'text', scale: 'sm' })<{ zapStyle?: ZapStyle }>`
+const CurrencySelectButton = styled(Button).attrs({ variant: 'text', scale: 'sm' }) <{ zapStyle?: ZapStyle }>`
   padding: 0 0.5rem;
   ${({ zapStyle, theme }) =>
     zapStyle &&
@@ -259,7 +259,7 @@ export default function CurrencyInputPanel({
               {!!currency && showBUSD && Number.isFinite(amountInDollar) && (
                 <Flex justifyContent="flex-end" mr="1rem">
                   <Flex maxWidth="200px">
-                    <Text fontSize="12px" color="textSubtle">
+                    <Text fontSize="12px" color="textSubtle" style={{ whiteSpace: "nowrap", textOverflow: "ellipsis" }} overflow="hidden" >
                       ~{formatNumber(amountInDollar)} USD
                     </Text>
                   </Flex>
