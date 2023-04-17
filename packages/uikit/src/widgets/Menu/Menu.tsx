@@ -22,6 +22,7 @@ const Wrapper = styled.div`
   width: 100%;
   display: grid;
   grid-template-rows: auto 1fr;
+  background-image: linear-gradient(to bottom, #000, #3bc4ff) !important;
 `;
 
 const StyledNav = styled.nav`
@@ -30,8 +31,8 @@ const StyledNav = styled.nav`
   align-items: center;
   width: 100%;
   height: ${MENU_HEIGHT}px;
-  background-color: ${({ theme }) => theme.nav.background};
-  border-bottom: 1px solid ${({ theme }) => theme.colors.cardBorder};
+  // background-color: ${({ theme }) => theme.nav.background};
+  // border-bottom: 1px solid ${({ theme }) => theme.colors.cardBorder};
   transform: translate3d(0, 0, 0);
 
   padding-left: 16px;

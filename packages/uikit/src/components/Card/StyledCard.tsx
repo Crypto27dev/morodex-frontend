@@ -30,8 +30,8 @@ const getBorderColor = ({ isActive, isSuccess, isWarning, borderBackground, them
   return theme.colors.cardBorder;
 };
 
-export const StyledCard = styled.div<StyledCardProps>`
-  background: ${getBorderColor};
+// background: ${getBorderColor};
+export const StyledCard = styled.div<StyledCardProps>`  
   border-radius: ${({ theme }) => theme.radii.card};
   color: ${({ theme, isDisabled }) => theme.colors[isDisabled ? "textDisabled" : "text"]};
   overflow: hidden;
@@ -55,6 +55,7 @@ export const StyledCardInner = styled(Box)<{ background?: string; hasCustomBorde
   overflow: ${({ hasCustomBorder }) => (hasCustomBorder ? "initial" : "inherit")};
   background: ${({ theme, background }) => background ?? theme.card.background};
   border-radius: ${({ theme }) => theme.radii.card};
+  // box-shadow: 0 20px 25px -5px #000,0 8px 10px -6px #000;
 `;
 
 StyledCard.defaultProps = {

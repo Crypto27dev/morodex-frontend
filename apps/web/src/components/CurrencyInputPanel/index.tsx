@@ -167,43 +167,60 @@ export default function CurrencyInputPanel({
 
   return (
     <Box position="relative" id={id}>
-      <Flex alignItems="center" justifyContent="space-between">
-        <Flex>
-          {beforeButton}
-          <CurrencySelectButton
-            zapStyle={zapStyle}
-            className="open-currency-select-button"
-            selected={!!currency}
-            onClick={() => {
-              if (!disableCurrencySelect) {
-                onPresentCurrencyModal()
-              }
-            }}
+      <Flex alignItems="center" justifyContent="flex-end">
+        {account && (
+          <Text
+            onClick={!disabled && onMax}
+            color="textSubtle"
+            fontSize="14px"
+            style={{ display: 'inline', cursor: 'pointer' }}
           >
-            <Flex alignItems="center" justifyContent="space-between">
-              {pair ? (
-                <DoubleCurrencyLogo currency0={pair.token0} currency1={pair.token1} size={16} margin />
-              ) : currency ? (
-                <CurrencyLogo currency={currency} size="24px" style={{ marginRight: '8px' }} />
-              ) : null}
-              {pair ? (
-                <Text id="pair" bold>
-                  {pair?.token0.symbol}:{pair?.token1.symbol}
-                </Text>
-              ) : (
-                <Text id="pair" bold>
-                  {(currency && currency.symbol && currency.symbol.length > 10
-                    ? `${currency.symbol.slice(0, 4)}...${currency.symbol.slice(
-                        currency.symbol.length - 5,
-                        currency.symbol.length,
-                      )}`
-                    : currency?.symbol) || t('Select a currency')}
-                </Text>
-              )}
-              {!disableCurrencySelect && <ChevronDownIcon />}
-            </Flex>
-          </CurrencySelectButton>
-          {/* {token && tokenAddress ? (
+            {!hideBalance && !!currency
+              ? t('Balance: %balance%', { balance: selectedCurrencyBalance?.toSignificant(6) ?? t('Loading') })
+              : ' -'}
+          </Text>
+        )}
+      </Flex>
+      <InputPanel>
+        <Container zapStyle={zapStyle} error={error}>
+          <Flex alignItems="center" justifyContent="space-between">
+            <Box>
+              <Flex>
+                {beforeButton}
+                <CurrencySelectButton
+                  zapStyle={zapStyle}
+                  className="open-currency-select-button"
+                  selected={!!currency}
+                  onClick={() => {
+                    if (!disableCurrencySelect) {
+                      onPresentCurrencyModal()
+                    }
+                  }}
+                >
+                  <Flex alignItems="center" justifyContent="space-between">
+                    {pair ? (
+                      <DoubleCurrencyLogo currency0={pair.token0} currency1={pair.token1} size={16} margin />
+                    ) : currency ? (
+                      <CurrencyLogo currency={currency} size="24px" style={{ marginRight: '8px' }} />
+                    ) : null}
+                    {pair ? (
+                      <Text id="pair" bold>
+                        {pair?.token0.symbol}:{pair?.token1.symbol}
+                      </Text>
+                    ) : (
+                      <Text id="pair" bold>
+                        {(currency && currency.symbol && currency.symbol.length > 10
+                          ? `${currency.symbol.slice(0, 4)}...${currency.symbol.slice(
+                            currency.symbol.length - 5,
+                            currency.symbol.length,
+                          )}`
+                          : currency?.symbol) || t('Select a currency')}
+                      </Text>
+                    )}
+                    {!disableCurrencySelect && <ChevronDownIcon />}
+                  </Flex>
+                </CurrencySelectButton>
+                {/* {token && tokenAddress ? (
             <Flex style={{ gap: '4px' }} ml="4px" alignItems="center">
               <CopyButton
                 width="16px"
@@ -223,90 +240,79 @@ export default function CurrencyInputPanel({
               />
             </Flex>
           ) : null} */}
-        </Flex>
-        {account && (
-          <Text
-            onClick={!disabled && onMax}
-            color="textSubtle"
-            fontSize="14px"
-            style={{ display: 'inline', cursor: 'pointer' }}
-          >
-            {!hideBalance && !!currency
-              ? t('Balance: %balance%', { balance: selectedCurrencyBalance?.toSignificant(6) ?? t('Loading') })
-              : ' -'}
-          </Text>
-        )}
-      </Flex>
-      <InputPanel>
-        <Container as="label" zapStyle={zapStyle} error={error}>
-          <LabelRow>
-            <NumericalInput
-              error={error}
-              disabled={disabled}
-              className="token-amount-input"
-              value={value}
-              onBlur={onInputBlur}
-              onUserInput={(val) => {
-                onUserInput(val)
-                setCurrentClickedPercent('')
-              }}
-            />
-          </LabelRow>
-          {!!currency && showBUSD && Number.isFinite(amountInDollar) && (
-            <Flex justifyContent="flex-end" mr="1rem">
-              <Flex maxWidth="200px">
-                <Text fontSize="12px" color="textSubtle">
-                  ~{formatNumber(amountInDollar)} USD
-                </Text>
               </Flex>
-            </Flex>
-          )}
-          <InputRow selected={disableCurrencySelect}>
-            {account && currency && selectedCurrencyBalance?.greaterThan(0) && !disabled && label !== 'To' && (
-              <Flex alignItems="right" justifyContent="right">
-                {maxAmount?.greaterThan(0) &&
-                  showQuickInputButton &&
-                  onPercentInput &&
-                  [25, 50, 75].map((percent) => {
-                    const isAtClickedPercent = currentClickedPercent === percent.toString()
-                    const isAtCurrentPercent =
-                      (maxAmount && value !== '0' && value === percentAmount[percent]) ||
-                      (lpPercent && lpPercent === percent.toString())
+            </Box>
+            <Box width="100%">
+              <LabelRow>
+                <NumericalInput
+                  error={error}
+                  disabled={disabled}
+                  className="token-amount-input"
+                  value={value}
+                  onBlur={onInputBlur}
+                  onUserInput={(val) => {
+                    onUserInput(val)
+                    setCurrentClickedPercent('')
+                  }}
+                />
+              </LabelRow>
+              {!!currency && showBUSD && Number.isFinite(amountInDollar) && (
+                <Flex justifyContent="flex-end" mr="1rem">
+                  <Flex maxWidth="200px">
+                    <Text fontSize="12px" color="textSubtle">
+                      ~{formatNumber(amountInDollar)} USD
+                    </Text>
+                  </Flex>
+                </Flex>
+              )}
+              <InputRow selected={disableCurrencySelect}>
+                {account && currency && selectedCurrencyBalance?.greaterThan(0) && !disabled && label !== 'To' && (
+                  <Flex alignItems="right" justifyContent="right">
+                    {maxAmount?.greaterThan(0) &&
+                      showQuickInputButton &&
+                      onPercentInput &&
+                      [25, 50, 75].map((percent) => {
+                        const isAtClickedPercent = currentClickedPercent === percent.toString()
+                        const isAtCurrentPercent =
+                          (maxAmount && value !== '0' && value === percentAmount[percent]) ||
+                          (lpPercent && lpPercent === percent.toString())
 
-                    return (
+                        return (
+                          <Button
+                            key={`btn_quickCurrency${percent}`}
+                            onClick={() => {
+                              onPercentInput(percent)
+                              setCurrentClickedPercent(percent.toString())
+                            }}
+                            scale="xs"
+                            mr="5px"
+                            variant={isAtClickedPercent || isAtCurrentPercent ? 'primary' : 'secondary'}
+                            style={{ textTransform: 'uppercase' }}
+                          >
+                            {percent}%
+                          </Button>
+                        )
+                      })}
+                    {maxAmount?.greaterThan(0) && showMaxButton && (
                       <Button
-                        key={`btn_quickCurrency${percent}`}
-                        onClick={() => {
-                          onPercentInput(percent)
-                          setCurrentClickedPercent(percent.toString())
+                        onClick={(e) => {
+                          e.stopPropagation()
+                          e.preventDefault()
+                          onMax?.()
+                          setCurrentClickedPercent('MAX')
                         }}
                         scale="xs"
-                        mr="5px"
-                        variant={isAtClickedPercent || isAtCurrentPercent ? 'primary' : 'secondary'}
+                        variant={isAtPercentMax ? 'primary' : 'secondary'}
                         style={{ textTransform: 'uppercase' }}
                       >
-                        {percent}%
+                        {t('Max')}
                       </Button>
-                    )
-                  })}
-                {maxAmount?.greaterThan(0) && showMaxButton && (
-                  <Button
-                    onClick={(e) => {
-                      e.stopPropagation()
-                      e.preventDefault()
-                      onMax?.()
-                      setCurrentClickedPercent('MAX')
-                    }}
-                    scale="xs"
-                    variant={isAtPercentMax ? 'primary' : 'secondary'}
-                    style={{ textTransform: 'uppercase' }}
-                  >
-                    {t('Max')}
-                  </Button>
+                    )}
+                  </Flex>
                 )}
-              </Flex>
-            )}
-          </InputRow>
+              </InputRow>
+            </Box>
+          </Flex>
         </Container>
         {disabled && <Overlay />}
       </InputPanel>
