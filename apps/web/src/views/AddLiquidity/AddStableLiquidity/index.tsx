@@ -287,6 +287,18 @@ export default function AddStableLiquidity({ currencyA, currencyB }) {
     <Page>
       <AppBody>
         <>
+          <div className="animate-x-slide"
+            style={{ position: 'absolute', top: '0', left: '0.125rem', height: '0.25rem', borderRadius: '0.25rem', backgroundImage: 'linear-gradient(to right,hsla(0,0%,100%,.15),#ff2b84)', filter: 'blur(1px)' }}
+          />
+          <div className="animate-y-slide"
+            style={{ position: 'absolute', top: '0.125rem', left: '0', width: '0.25rem', borderRadius: '0.25rem', backgroundImage: 'linear-gradient(to right,hsla(0,0%,100%,.15),#ff2b84)', filter: 'blur(1px)' }}
+          />
+          <div className="animate-y-slide"
+            style={{ position: 'absolute', bottom: '0.125rem', right: '0', width: '0.25rem', borderRadius: '0.25rem', backgroundImage: 'linear-gradient(to right,hsla(0,0%,100%,.15),#00e9b1)', filter: 'blur(1px)' }}
+          />
+          <div className="animate-x-slide"
+            style={{ position: 'absolute', bottom: '0', right: '0.125rem', height: '0.25rem', borderRadius: '0.25rem', backgroundImage: 'linear-gradient(to right,hsla(0,0%,100%,.15),#00e9b1)', filter: 'blur(1px)' }}
+          />
           <AppHeader
             title={
               currencies[Field.CURRENCY_A]?.symbol && currencies[Field.CURRENCY_B]?.symbol

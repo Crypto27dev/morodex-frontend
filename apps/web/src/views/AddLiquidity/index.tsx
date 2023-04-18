@@ -192,8 +192,8 @@ export default function AddLiquidity({ currencyA, currencyB }) {
     () => ({
       [independentField]:
         canZap &&
-        ((independentField === Field.CURRENCY_A && !zapTokenCheckedA) ||
-          (independentField === Field.CURRENCY_B && !zapTokenCheckedB))
+          ((independentField === Field.CURRENCY_A && !zapTokenCheckedA) ||
+            (independentField === Field.CURRENCY_B && !zapTokenCheckedB))
           ? ''
           : typedValue,
       [dependentField]: noLiquidity ? otherTypedValue : parsedAmounts[dependentField]?.toSignificant(6) ?? '',
@@ -317,17 +317,17 @@ export default function AddLiquidity({ currencyA, currencyB }) {
 
   const pendingText = preferZapInstead
     ? t('Zapping %amountA% %symbolA% and %amountB% %symbolB%', {
-        amountA: parsedAmounts[Field.CURRENCY_A]?.toSignificant(6) ?? '0',
-        symbolA: currencies[Field.CURRENCY_A]?.symbol ?? '',
-        amountB: parsedAmounts[Field.CURRENCY_B]?.toSignificant(6) ?? '0',
-        symbolB: currencies[Field.CURRENCY_B]?.symbol ?? '',
-      })
+      amountA: parsedAmounts[Field.CURRENCY_A]?.toSignificant(6) ?? '0',
+      symbolA: currencies[Field.CURRENCY_A]?.symbol ?? '',
+      amountB: parsedAmounts[Field.CURRENCY_B]?.toSignificant(6) ?? '0',
+      symbolB: currencies[Field.CURRENCY_B]?.symbol ?? '',
+    })
     : t('Supplying %amountA% %symbolA% and %amountB% %symbolB%', {
-        amountA: parsedAmounts[Field.CURRENCY_A]?.toSignificant(6) ?? '',
-        symbolA: currencies[Field.CURRENCY_A]?.symbol ?? '',
-        amountB: parsedAmounts[Field.CURRENCY_B]?.toSignificant(6) ?? '',
-        symbolB: currencies[Field.CURRENCY_B]?.symbol ?? '',
-      })
+      amountA: parsedAmounts[Field.CURRENCY_A]?.toSignificant(6) ?? '',
+      symbolA: currencies[Field.CURRENCY_A]?.symbol ?? '',
+      amountB: parsedAmounts[Field.CURRENCY_B]?.toSignificant(6) ?? '',
+      symbolB: currencies[Field.CURRENCY_B]?.symbol ?? '',
+    })
 
   const handleDismissConfirmation = useCallback(() => {
     // if there was a tx hash, we want to clear the input
@@ -575,6 +575,18 @@ export default function AddLiquidity({ currencyA, currencyB }) {
   return (
     <Page>
       <AppBody>
+        <div className="animate-x-slide"
+          style={{ position: 'absolute', top: '0', left: '0.125rem', height: '0.25rem', borderRadius: '0.25rem', backgroundImage: 'linear-gradient(to right,hsla(0,0%,100%,.15),#ff2b84)', filter: 'blur(1px)' }}
+        />
+        <div className="animate-y-slide"
+          style={{ position: 'absolute', top: '0.125rem', left: '0', width: '0.25rem', borderRadius: '0.25rem', backgroundImage: 'linear-gradient(to right,hsla(0,0%,100%,.15),#ff2b84)', filter: 'blur(1px)' }}
+        />
+        <div className="animate-y-slide"
+          style={{ position: 'absolute', bottom: '0.125rem', right: '0', width: '0.25rem', borderRadius: '0.25rem', backgroundImage: 'linear-gradient(to right,hsla(0,0%,100%,.15),#00e9b1)', filter: 'blur(1px)' }}
+        />
+        <div className="animate-x-slide"
+          style={{ position: 'absolute', bottom: '0', right: '0.125rem', height: '0.25rem', borderRadius: '0.25rem', backgroundImage: 'linear-gradient(to right,hsla(0,0%,100%,.15),#00e9b1)', filter: 'blur(1px)' }}
+        />
         {!showAddLiquidity && (
           <ChoosePair
             error={error}
@@ -744,16 +756,16 @@ export default function AddLiquidity({ currencyA, currencyB }) {
                         </strong>{' '}
                         {zapIn.gasOverhead
                           ? t(
-                              'Some of your %token0% will be converted to %token1% before adding liquidity, but this may cause higher gas fees.',
-                              {
-                                token0: currencies[zapIn.swapTokenField]?.symbol,
-                                token1: currencies[zapIn.swapOutTokenField]?.symbol,
-                              },
-                            )
-                          : t('Some of your %token0% will be converted to %token1%.', {
+                            'Some of your %token0% will be converted to %token1% before adding liquidity, but this may cause higher gas fees.',
+                            {
                               token0: currencies[zapIn.swapTokenField]?.symbol,
                               token1: currencies[zapIn.swapOutTokenField]?.symbol,
-                            })}
+                            },
+                          )
+                          : t('Some of your %token0% will be converted to %token1%.', {
+                            token0: currencies[zapIn.swapTokenField]?.symbol,
+                            token1: currencies[zapIn.swapOutTokenField]?.symbol,
+                          })}
                       </MessageText>
                     </AutoColumn>
                   </Message>
