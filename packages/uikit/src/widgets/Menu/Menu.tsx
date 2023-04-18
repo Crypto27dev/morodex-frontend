@@ -148,7 +148,7 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
             <Flex>
                 <Logo href={homeLink?.href ?? "/"} />
               </Flex>
-              <Flex alignItems="center" height="100%">
+              <Flex alignItems="center" height="100%" style={{marginTop:'28px', marginRight: '30px'}}>
                 <AtomBox display={{ xs: "none", md: "block" }}>
                   {/* <MenuItems items={links} activeItem={activeItem} activeSubItem={activeSubItem} ml="24px" /> */}
                   {/* <Flex justifyContent="space-around" overflow="hidden"> */}

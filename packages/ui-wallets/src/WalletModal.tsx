@@ -78,13 +78,13 @@ const TabContainer = ({ children, docLink, docText }: PropsWithChildren<{ docLin
 
   return (
     <AtomBox position="relative" zIndex="modal" className={modalWrapperClass}>
-      <AtomBox position="absolute" style={{ top: '-50px' }}>
+      {/* <AtomBox position="absolute" style={{ top: '-50px' }}>
         <TabMenu activeIndex={index} onItemClick={setIndex} gap="0px" isColorInverse>
           <Tab>{t('Connect Wallet')}</Tab>
           <Tab>{t('What’s a Web3 Wallet?')}</Tab>
         </TabMenu>
-      </AtomBox>
-      <AtomBox
+      </AtomBox> */}
+      {/* <AtomBox
         display="flex"
         position="relative"
         background="gradientCardHeader"
@@ -95,10 +95,11 @@ const TabContainer = ({ children, docLink, docText }: PropsWithChildren<{ docLin
         }}
         zIndex="modal"
         width="full"
-      >
-        {index === 0 && children}
-        {index === 1 && <StepIntro docLink={docLink} docText={docText} />}
-      </AtomBox>
+      > */}
+        {children}
+        {/* {index === 0 && children}
+        {index === 1 && <StepIntro docLink={docLink} docText={docText} />} */}
+      {/* </AtomBox> */}
     </AtomBox>
   )
 }
@@ -342,7 +343,7 @@ function DesktopModal<T>({
           }}
         />
       </AtomBox>
-      <AtomBox
+      {/* <AtomBox
         flex={1}
         mx="24px"
         display={{
@@ -370,7 +371,7 @@ function DesktopModal<T>({
           )}
           {selected && selected.installed === false && <NotInstalled qrCode={qrCode} wallet={selected} />}
         </AtomBox>
-      </AtomBox>
+      </AtomBox> */}
     </>
   )
 }
@@ -422,13 +423,13 @@ export function WalletModalV2<T = unknown>(props: WalletModalV2Props<T>) {
     <ModalV2 closeOnOverlayClick {...rest}>
       <ModalWrapper onDismiss={props.onDismiss} style={{ overflow: 'visible', border: 'none' }}>
         <AtomBox position="relative">
-          <TabContainer docLink={docLink} docText={docText}>
+          {/* <TabContainer docLink={docLink} docText={docText}> */}
             {isMobile ? (
               <MobileModal connectWallet={connectWallet} wallets={wallets} docLink={docLink} docText={docText} />
             ) : (
               <DesktopModal connectWallet={connectWallet} wallets={wallets} docLink={docLink} docText={docText} />
             )}
-          </TabContainer>
+          {/* </TabContainer> */}
         </AtomBox>
       </ModalWrapper>
     </ModalV2>
