@@ -5,8 +5,10 @@
     "jest": true
   },
   "plugins": ["lodash"],
-  "extends": ["plugin:@next/next/recommended"],
+  "extends": ["next", "plugin:@next/next/recommended", "next/core-web-vitals"],
   "rules": {
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-page-custom-font": "off",
     "no-restricted-syntax": 0,
     "import/no-unresolved": 0,
     "no-console": ["warn", { "allow": ["info", "warn", "error", "debug"] }],
