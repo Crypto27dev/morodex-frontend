@@ -3,6 +3,7 @@ import styled, { keyframes } from "styled-components";
 import Flex from "../../../components/Box/Flex";
 import { LogoIcon, LogoWithTextIcon } from "../../../components/Svg";
 import { MenuContext } from "../context";
+import { AtomBox } from "@pancakeswap/ui/components/AtomBox";
 
 interface Props {
   href: string;
@@ -46,8 +47,12 @@ const Logo: React.FC<React.PropsWithChildren<Props>> = ({ href }) => {
   const isAbsoluteUrl = href.startsWith("http");
   const innerLogo = (
     <>
-      {/* <LogoIcon className="mobile-icon" /> */}
-      <LogoWithTextIcon className="desktop-icon" />
+      <AtomBox display={{ xs: "block", lg: "none" }}>
+        <LogoIcon className="mobile-icon" />
+      </AtomBox>
+      <AtomBox display={{ xs: "none", lg: "block" }}>
+        <LogoWithTextIcon className="desktop-icon" />
+      </AtomBox>
     </>
   );
 

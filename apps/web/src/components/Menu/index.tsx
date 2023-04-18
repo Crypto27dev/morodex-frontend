@@ -4,6 +4,7 @@ import { Menu as UikitMenu, NextLinkFromReactRouter, footerLinks } from '@pancak
 import { useTranslation, languageList } from '@pancakeswap/localization'
 import PhishingWarningBanner from 'components/PhishingWarningBanner'
 import { NetworkSwitcher } from 'components/NetworkSwitcher'
+import { MainMenu } from 'components/MainMenu'
 import useTheme from 'hooks/useTheme'
 import { useCakeBusdPrice } from 'hooks/useBUSDPrice'
 import { usePhishingBannerManager } from 'state/user/hooks'
@@ -12,6 +13,7 @@ import { useMenuItems } from './hooks/useMenuItems'
 import GlobalSettings from './GlobalSettings'
 import { getActiveMenuItem, getActiveSubMenuItem } from './utils'
 import { SettingsMode } from './GlobalSettings/types'
+import { AtomBox } from "@pancakeswap/ui/components/AtomBox";
 
 const Menu = (props) => {
   const { isDark, setTheme } = useTheme()
@@ -44,6 +46,9 @@ const Menu = (props) => {
             {/* <GlobalSettings mode={SettingsMode.GLOBAL} /> */}
             <NetworkSwitcher />
             <UserMenu />
+            <AtomBox display={{ xs: "block", md: "none" }}>
+              <MainMenu />
+            </AtomBox>
           </>
         }
         banner={showPhishingWarningBanner && typeof window !== 'undefined' && <PhishingWarningBanner />}

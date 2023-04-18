@@ -5,7 +5,7 @@ import { SvgProps } from "../types";
 
 const Logo: React.FC<React.PropsWithChildren<SvgProps>> = (props) => {
   return (
-    <img src="/images/logo.svg" width="300px" alt="logo" style={{position: 'absolute', left:'5px', top:'5px'}}/>
+    <img src="/images/logo.svg" width="260px" alt="logo" style={{position: 'absolute', left:'5px', top:'5px'}}/>
     // <Svg viewBox="0 0 1281 199" {...props}>
     //   <path
     //     fill={vars.colors.contrast}

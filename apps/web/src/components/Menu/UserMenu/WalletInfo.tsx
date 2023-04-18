@@ -151,7 +151,7 @@ const WalletInfo: React.FC<WalletInfoProps> = ({ hasLowNativeBalance, onDismiss 
           )}
         </Flex>
       </Box>
-      <CakeBenefitsCard onDismiss={onDismiss} />
+      {/* <CakeBenefitsCard onDismiss={onDismiss} /> */}
       <Button variant="secondary" width="100%" minHeight={48} onClick={handleLogout}>
         {t('Disconnect Wallet')}
       </Button>

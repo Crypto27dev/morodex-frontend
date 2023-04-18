@@ -20,9 +20,11 @@ import { NavProps } from "./types";
 const Wrapper = styled.div`
   position: relative;
   width: 100%;
-  display: grid;
-  grid-template-rows: auto 1fr;
-  background-image: linear-gradient(to bottom, #000, #3bc4ff) !important;
+  display: flex;
+  // display: grid;
+  // grid-template-rows: auto 1fr;
+  // background-image: linear-gradient(to bottom, #000, #3bc4ff) !important;
+  justify-content: center;
 `;
 
 const StyledNav = styled.nav`
@@ -59,14 +61,16 @@ const TopBannerContainer = styled.div<{ height: number }>`
 const BodyWrapper = styled(Box)`
   position: relative;
   display: flex;
-  max-width: 100vw;
+  max-width: 576px;
+  width: 100%;
 `;
 
 const Inner = styled.div`
   flex-grow: 1;
   transition: margin-top 0.2s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translate3d(0, 0, 0);
-  max-width: 100%;
+  max-width: 576px
+  width: 100%;
 `;
 
 const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
@@ -142,31 +146,34 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
         }}
       >
         <Wrapper>
+          <div
+            style={{position:"fixed", opacity:"0.5", inset:"0", backgroundImage:"linear-gradient(to bottom, #000, #3bc4ff)"}}>
+          </div>
           <FixedContainer showMenu={showMenu} height={totalTopMenuHeight}>
             {/* {banner && isMounted && <TopBannerContainer height={topBannerHeight}>{banner}</TopBannerContainer>} */}
             <StyledNav>
-            <Flex>
+              <Flex>
                 <Logo href={homeLink?.href ?? "/"} />
               </Flex>
-              <Flex alignItems="center" height="100%" style={{marginTop:'28px', marginRight: '30px'}}>
+              <Flex alignItems="center" height="100%" style={{ marginTop: '28px', marginRight: '30px' }}>
                 <AtomBox display={{ xs: "none", md: "block" }}>
                   {/* <MenuItems items={links} activeItem={activeItem} activeSubItem={activeSubItem} ml="24px" /> */}
                   {/* <Flex justifyContent="space-around" overflow="hidden"> */}
+                  <SubMenuItems
+                    items={subLinksWithoutMobile}
+                    mt={`${totalTopMenuHeight + 1}px`}
+                    activeItem={activeSubItem}
+                    style={{ margin: 0 }}
+                  />
+
+                  {subLinksMobileOnly && subLinksMobileOnly?.length > 0 && (
                     <SubMenuItems
-                      items={subLinksWithoutMobile}
+                      items={subLinksMobileOnly}
                       mt={`${totalTopMenuHeight + 1}px`}
                       activeItem={activeSubItem}
-                      style={{margin:0}}
+                      isMobileOnly
                     />
-
-                    {subLinksMobileOnly && subLinksMobileOnly?.length > 0 && (
-                      <SubMenuItems
-                        items={subLinksMobileOnly}
-                        mt={`${totalTopMenuHeight + 1}px`}
-                        activeItem={activeSubItem}
-                        isMobileOnly
-                      />
-                    )}
+                  )}
                   {/* </Flex> */}
                 </AtomBox>
                 <AtomBox mr="12px" display={{ xs: "none", lg: "block" }}>
@@ -223,9 +230,9 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
         buyCakeLink={buyCakeLink}
         mb={[`${MOBILE_MENU_HEIGHT}px`, null, "0px"]}
       /> */}
-      <AtomBox display={{ xs: "block", md: "none" }}>
+      {/* <AtomBox display={{ xs: "block", md: "none" }}>
         <BottomNav items={links} activeItem={activeItem} activeSubItem={activeSubItem} />
-      </AtomBox>
+      </AtomBox> */}
     </MenuContext.Provider>
   );
 };
