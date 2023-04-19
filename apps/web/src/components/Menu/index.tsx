@@ -22,10 +22,11 @@ const Menu = (props) => {
   const { pathname } = useRouter()
   const [showPhishingWarningBanner] = usePhishingBannerManager()
 
+  const pathname_default = '/swap'
   const menuItems = useMenuItems()
 
-  const activeMenuItem = getActiveMenuItem({ menuConfig: menuItems, pathname })
-  const activeSubMenuItem = getActiveSubMenuItem({ menuItem: activeMenuItem, pathname })
+  const activeMenuItem = getActiveMenuItem({ menuConfig: menuItems, pathname: pathname_default })
+  const activeSubMenuItem = getActiveSubMenuItem({ menuItem: activeMenuItem, pathname: pathname_default })
 
   const toggleTheme = useMemo(() => {
     return () => setTheme(isDark ? 'dark' : 'dark')
