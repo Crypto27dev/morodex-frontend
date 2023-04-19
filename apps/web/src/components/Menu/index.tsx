@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { useMemo, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { Menu as UikitMenu, NextLinkFromReactRouter, footerLinks } from '@pancakeswap/uikit'
 import { useTranslation, languageList } from '@pancakeswap/localization'
@@ -28,12 +28,16 @@ const Menu = (props) => {
   const activeSubMenuItem = getActiveSubMenuItem({ menuItem: activeMenuItem, pathname })
 
   const toggleTheme = useMemo(() => {
-    return () => setTheme(isDark ? 'light' : 'dark')
+    return () => setTheme(isDark ? 'dark' : 'dark')
   }, [setTheme, isDark])
 
   const getFooterLinks = useMemo(() => {
     return footerLinks(t)
   }, [t])
+
+  useEffect(() => {
+    setTheme('dark');
+  }, [])
 
   return (
     <>

@@ -5,7 +5,7 @@
     "jest": true
   },
   "plugins": ["lodash"],
-  "extends": ["next", "plugin:@next/next/recommended", "next/core-web-vitals"],
+  "extends": ["plugin:@next/next/recommended", "next/core-web-vitals"],
   "rules": {
     "react/no-unescaped-entities": "off",
     "@next/next/no-page-custom-font": "off",
