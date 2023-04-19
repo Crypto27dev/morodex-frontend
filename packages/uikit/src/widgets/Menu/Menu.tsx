@@ -61,7 +61,7 @@ const TopBannerContainer = styled.div<{ height: number }>`
 const BodyWrapper = styled(Box)`
   position: relative;
   display: flex;
-  max-width: 576px;
+  // max-width: 576px;
   width: 100%;
 `;
 
