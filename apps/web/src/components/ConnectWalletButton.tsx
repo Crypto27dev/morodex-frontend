@@ -3,6 +3,7 @@ import { WalletModalV2 } from '@pancakeswap/ui-wallets'
 import { Button, ButtonProps } from '@pancakeswap/uikit'
 import { createWallets, getDocLink } from 'config/wallet'
 import { useActiveChainId } from 'hooks/useActiveChainId'
+import styled from 'styled-components'
 import useAuth from 'hooks/useAuth'
 // @ts-ignore
 // eslint-disable-next-line import/extensions
@@ -10,6 +11,7 @@ import { useActiveHandle } from 'hooks/useEagerConnect.bmp.ts'
 import { useMemo, useState } from 'react'
 import { useConnect } from 'wagmi'
 import Trans from './Trans'
+import { variants } from '@pancakeswap/uikit/src/components/Button/types'
 
 const ConnectWalletButton = ({ children, ...props }: ButtonProps) => {
   const handleActive = useActiveHandle()
@@ -24,6 +26,16 @@ const ConnectWalletButton = ({ children, ...props }: ButtonProps) => {
 
   const docLink = useMemo(() => getDocLink(code), [code])
 
+  const ConnectButton = styled(Button)`
+    background: transparent;
+    color: white;
+    border: solid 2px rgba(255, 255, 255, 0.25);
+    :hover {
+      background: rgb(0, 233, 177) !important;
+      opacity: 1 !important;
+      border-color: rgba(255, 255, 255, 1);
+    }
+  `
   const handleClick = () => {
     if (typeof __NEZHA_BRIDGE__ !== 'undefined') {
       handleActive()
@@ -36,9 +48,9 @@ const ConnectWalletButton = ({ children, ...props }: ButtonProps) => {
 
   return (
     <>
-      <Button onClick={handleClick} {...props}>
+      <ConnectButton onClick={handleClick} {...props}>
         {children || <Trans>Connect Wallet</Trans>}
-      </Button>
+      </ConnectButton>
       <WalletModalV2
         docText={t('Learn How to Connect')}
         docLink={docLink}

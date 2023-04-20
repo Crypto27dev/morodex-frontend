@@ -56,7 +56,10 @@ export const ModalBackButton: React.FC<React.PropsWithChildren<{ onBack: ModalPr
 
 export const ModalContainer = styled(MotionBox)<{ $minWidth: string }>`
   overflow: hidden;
-  background: ${({ theme }) => theme.modal.background};
+  // background: ${({ theme }) => theme.modal.background};
+  background: rgb(59, 100, 110);
+  // background: rgb(83, 145, 153);
+  // background: rgb(80, 116, 133);
   box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);
   border: 1px solid ${({ theme }) => theme.colors.cardBorder};
   border-radius: 10px 10px 0px 0px;
