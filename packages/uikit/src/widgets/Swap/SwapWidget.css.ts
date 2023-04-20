@@ -8,15 +8,16 @@ export const switchButtonClass = style([
   atoms({}),
   style({
     backgroundColor: "primary",
-    boxShadow: "inset 0px -2px 0px rgba(0, 0, 0, 0.1)",
   }),
 ]);
 
 export const iconDownClass = style({
+  color: "rgb(0, 233, 177)",
+  fill: "rgb(0, 233, 177) !important",
+  width: "2.5em",
   selectors: {
     [`${switchButtonClass}:hover &`]: {
       display: "none",
-      fill: "white",
     },
   },
 });
@@ -26,7 +27,12 @@ export const iconUpDownClass = style({
   selectors: {
     [`${switchButtonClass}:hover &`]: {
       display: "block",
-      fill: "white",
+      // fill: "white",
+      fill: "rgba(255, 255, 255, 0.7)",
+      borderRadius: "50%",
+      boxShadow: "0 0 0 2px rgba(255, 255, 255, 0.7)",
+      color: "rgba(255, 255, 255, 0.7)",
+      width: "2.5em",
     },
   },
 });

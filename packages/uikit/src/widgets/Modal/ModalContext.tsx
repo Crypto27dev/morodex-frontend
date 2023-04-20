@@ -34,26 +34,26 @@ export const StyledModalWrapper = styled(m.div)`
   bottom: 0;
   left: 0;
   z-index: ${({ theme }) => theme.zIndices.modal - 1};
-  will-change: opacity;
-  opacity: 0;
-  &.appear {
-    animation: ${appearAnimation} 0.3s ease-in-out forwards;
-    ${ModalContainer} {
-      animation: ${mountAnimation} 0.3s ease-in-out forwards;
-      ${({ theme }) => theme.mediaQueries.md} {
-        animation: none;
-      }
-    }
-  }
-  &.disappear {
-    animation: ${disappearAnimation} 0.3s ease-in-out forwards;
-    ${ModalContainer} {
-      animation: ${unmountAnimation} 0.3s ease-in-out forwards;
-      ${({ theme }) => theme.mediaQueries.md} {
-        animation: none;
-      }
-    }
-  }
+  // will-change: opacity;
+  // opacity: 0;
+  // &.appear {
+  //   animation: ${appearAnimation} 0.3s ease-in-out forwards;
+  //   ${ModalContainer} {
+  //     animation: ${mountAnimation} 0.3s ease-in-out forwards;
+  //     ${({ theme }) => theme.mediaQueries.md} {
+  //       animation: none;
+  //     }
+  //   }
+  // }
+  // &.disappear {
+  //   animation: ${disappearAnimation} 0.3s ease-in-out forwards;
+  //   ${ModalContainer} {
+  //     animation: ${unmountAnimation} 0.3s ease-in-out forwards;
+  //     ${({ theme }) => theme.mediaQueries.md} {
+  //       animation: none;
+  //     }
+  //   }
+  // }
 `;
 
 export const Context = createContext<ModalsContext>({
@@ -118,7 +118,7 @@ const ModalProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
               variants={animationVariants}
               transition={{ duration: 0.3 }}
             >
-              <Overlay onClick={handleOverlayDismiss} />
+              <Overlay onClick={handleOverlayDismiss} style={{backgroundColor: 'rgba(0, 0, 0, 0.5)'}}/>
               {React.isValidElement(modalNode) &&
                 React.cloneElement(modalNode, {
                   // @ts-ignore

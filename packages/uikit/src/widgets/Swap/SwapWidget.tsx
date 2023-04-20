@@ -11,7 +11,7 @@ import { TradePrice } from "./TradePrice";
 const SwapSwitchButton = (props: ButtonProps) => (
   <IconButton className={switchButtonClass} variant="light" scale="sm" {...props}>
     <ArrowDownIcon className={iconDownClass} color="primary" />
-    <ArrowUpDownIcon className={iconUpDownClass} color="primary" />
+    <ArrowDownIcon className={iconUpDownClass} color="primary" />
   </IconButton>
 );
 

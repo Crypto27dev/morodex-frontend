@@ -279,7 +279,7 @@ export const SmartSwapForm: React.FC<{ handleOutputSelect: (newCurrencyOutput: C
           )} */}
 
           <AutoColumn justify="space-between">
-            <AutoRow justify={isExpertMode ? 'space-between' : 'center'} style={{ padding: '0 1rem' }}>
+            <AutoRow justify={isExpertMode ? 'space-between' : 'center'} style={{ padding: '1rem' }}>
               <SwapUI.SwitchButton
                 onClick={() => {
                   setApprovalSubmitted(false) // reset 2 step UI for approvals

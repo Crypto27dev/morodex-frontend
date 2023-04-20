@@ -43,7 +43,7 @@ const StyledModalContainer = styled(ModalContainer)`
 `
 
 const StyledModalBody = styled(ModalBody)`
-  padding: 24px;
+  padding: 24px 24px 0px 24px;
   overflow-y: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -117,7 +117,7 @@ export default function CurrencySearchModal({
   }, [adding, dispatch, fetchList, listURL])
 
   const config = {
-    [CurrencyModalView.search]: { title: t('Select a Token'), onBack: undefined },
+    [CurrencyModalView.search]: { title: t('Select a token'), onBack: undefined },
     [CurrencyModalView.manage]: { title: t('Manage'), onBack: () => setModalView(CurrencyModalView.search) },
     [CurrencyModalView.importToken]: {
       title: t('Import Tokens'),
@@ -192,7 +192,7 @@ export default function CurrencySearchModal({
         ) : (
           ''
         )}
-        {modalView === CurrencyModalView.search && (
+        {/* {modalView === CurrencyModalView.search && (
           <Footer>
             <Button
               scale="sm"
@@ -203,7 +203,7 @@ export default function CurrencySearchModal({
               {t('Manage Tokens')}
             </Button>
           </Footer>
-        )}
+        )} */}
       </StyledModalBody>
     </StyledModalContainer>
   )

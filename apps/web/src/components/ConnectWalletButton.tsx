@@ -49,7 +49,7 @@ const ConnectWalletButton = ({ children, ...props }: ButtonProps) => {
   return (
     <>
       <ConnectButton onClick={handleClick} {...props}>
-        {children || <Trans>Connect Wallet</Trans>}
+        {children || <Trans>Connect</Trans>}
       </ConnectButton>
       <WalletModalV2
         docText={t('Learn How to Connect')}

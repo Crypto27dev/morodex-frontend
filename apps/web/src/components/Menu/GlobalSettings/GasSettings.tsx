@@ -10,7 +10,7 @@ const GasSettings = () => {
   return (
     <Flex flexDirection="column">
       <Flex mb="12px" alignItems="center">
-        <Text>{t('Default Transaction Speed (GWEI)')}</Text>
+        <Text>{t('Default transaction speed (GWEI)')}</Text>
         <QuestionHelper
           text={
             <Flex flexDirection="column">

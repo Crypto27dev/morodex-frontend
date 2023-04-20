@@ -319,10 +319,11 @@ function DesktopModal<T>({
         zIndex="modal"
         borderRadius="card"
         className={desktopWalletSelectionClass}
+        style={{background:"inherit"}}
       >
         <AtomBox px="48px">
           <Heading color="color" as="h4">
-            {t('Connect Wallet')}
+            {t('Connect a wallet')}
           </Heading>
           <Text color="textSubtle" small pt="24px" pb="32px">
             {t(

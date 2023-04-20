@@ -17,16 +17,19 @@ const ButtonWrapper = styled.div`
 `
 
 const BaseWrapper = styled.div<{ disable?: boolean }>`
-  border: 1px solid ${({ theme, disable }) => (disable ? 'transparent' : theme.colors.dropdown)};
+  // border: 1px solid ${({ theme, disable }) => (disable ? 'transparent' : theme.colors.dropdown)};
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   display: flex;
   padding: 6px;
   align-items: center;
   :hover {
     cursor: ${({ disable }) => !disable && 'pointer'};
-    background-color: ${({ theme, disable }) => !disable && theme.colors.background};
+    // background-color: ${({ theme, disable }) => !disable && theme.colors.background};
+    background-color: rgba(255, 255, 255, 0.25);
   }
-  background-color: ${({ theme, disable }) => disable && theme.colors.dropdown};
+  // background-color: ${({ theme, disable }) => disable && theme.colors.dropdown};
+  background-color: rgba(255, 255, 255, 0.1);
   opacity: ${({ disable }) => disable && '0.4'};
 `
 
@@ -56,10 +59,10 @@ export default function CommonBases({
 }) {
   const native = useNativeCurrency()
   const { t } = useTranslation()
-  const pinTokenDescText = commonBasesType === CommonBasesType.SWAP_LIMITORDER ? t('Common tokens') : t('Common bases')
+  const pinTokenDescText = commonBasesType === CommonBasesType.SWAP_LIMITORDER ? t('Popular tokens') : t('Popular bases')
 
   return (
-    <AutoColumn gap="md">
+    <AutoColumn gap="md" style={{backgroundColor:'rgba(255, 255, 255, 0.1)', padding:'8px', borderRadius:'8px'}}>
       <AutoRow>
         <Text fontSize="14px">{pinTokenDescText}</Text>
         {commonBasesType === CommonBasesType.LIQUIDITY && (

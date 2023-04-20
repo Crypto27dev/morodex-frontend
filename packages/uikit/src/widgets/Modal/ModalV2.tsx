@@ -38,7 +38,7 @@ export function ModalV2({ isOpen, onDismiss, closeOnOverlayClick, children, ...p
               transition={{ duration: 0.3 }}
               {...props}
             >
-              <Overlay onClick={handleOverlayDismiss} />
+              <Overlay onClick={handleOverlayDismiss}  style={{backgroundColor: 'rgba(0, 0, 0, 0.5)'}}/>
               {children}
             </StyledModalWrapper>
           )}

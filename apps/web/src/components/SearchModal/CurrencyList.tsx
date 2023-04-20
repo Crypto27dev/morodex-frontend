@@ -51,7 +51,8 @@ const MenuItem = styled(RowBetween)<{ disabled: boolean; selected: boolean }>`
   cursor: ${({ disabled }) => !disabled && 'pointer'};
   pointer-events: ${({ disabled }) => disabled && 'none'};
   :hover {
-    background-color: ${({ theme, disabled }) => !disabled && theme.colors.background};
+    // background-color: ${({ theme, disabled }) => !disabled && theme.colors.background};
+    background-color: rgba(255, 255, 255, 0.2);
   }
   opacity: ${({ disabled, selected }) => (disabled || selected ? 0.5 : 1)};
 `
