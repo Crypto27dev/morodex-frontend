@@ -41,10 +41,12 @@ const StyledNav = styled.nav`
   padding-right: 16px;
 `;
 
-const FixedContainer = styled.div<{ showMenu: boolean; height: number }>`
+const FixedContainer = styled.div<{ showMenu: boolean; height: number; showMenuBottom: boolean }>`
   position: fixed;
+  background-color: black;
   top: ${({ showMenu, height }) => (showMenu ? 0 : `-${height}px`)};
   left: 0;
+  border-bottom: ${({showMenuBottom}) => (showMenuBottom? 'solid thin #e5e7eb' : 'none')};
   transition: top 0.2s;
   height: ${({ height }) => `${height}px`};
   width: 100%;
@@ -95,32 +97,41 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
   const { isMobile } = useMatchBreakpoints();
   const isMounted = useIsMounted();
   const [showMenu, setShowMenu] = useState(true);
+  const [showMenuBottom, setShowMenuBottom] = useState(false);
   const refPrevOffset = useRef(typeof window === "undefined" ? 0 : window.pageYOffset);
 
   const topBannerHeight = isMobile ? TOP_BANNER_HEIGHT_MOBILE : TOP_BANNER_HEIGHT;
 
-  const totalTopMenuHeight = isMounted && banner ? MENU_HEIGHT + topBannerHeight : MENU_HEIGHT;
+  // const totalTopMenuHeight = isMounted && banner ? MENU_HEIGHT + topBannerHeight : MENU_HEIGHT;
+  const totalTopMenuHeight = isMounted && MENU_HEIGHT;
 
   useEffect(() => {
     const handleScroll = () => {
       const currentOffset = window.pageYOffset;
       const isBottomOfPage = window.document.body.clientHeight === currentOffset + window.innerHeight;
       const isTopOfPage = currentOffset === 0;
-      // Always show the menu when user reach the top
+      // // Always show the menu when user reach the top
+      // if (isTopOfPage) {
+      //   setShowMenu(true);
+      // }
+      // // Avoid triggering anything at the bottom because of layout shift
+      // else if (!isBottomOfPage) {
+      //   if (currentOffset < refPrevOffset.current || currentOffset <= totalTopMenuHeight) {
+      //     // Has scroll up
+      //     setShowMenu(true);
+      //   } else {
+      //     // Has scroll down
+      //     setShowMenu(false);
+      //   }
+      // }
+      // refPrevOffset.current = currentOffset;
+
       if (isTopOfPage) {
-        setShowMenu(true);
+        setShowMenuBottom(false);
       }
-      // Avoid triggering anything at the bottom because of layout shift
-      else if (!isBottomOfPage) {
-        if (currentOffset < refPrevOffset.current || currentOffset <= totalTopMenuHeight) {
-          // Has scroll up
-          setShowMenu(true);
-        } else {
-          // Has scroll down
-          setShowMenu(false);
-        }
+      else {
+        setShowMenuBottom(true);
       }
-      refPrevOffset.current = currentOffset;
     };
     const throttledHandleScroll = throttle(handleScroll, 200);
 
@@ -149,7 +160,7 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
           <div
             style={{position:"fixed", opacity:"0.5", inset:"0", backgroundImage:"linear-gradient(to bottom, #000, #3bc4ff)"}}>
           </div>
-          <FixedContainer showMenu={showMenu} height={totalTopMenuHeight}>
+          <FixedContainer showMenu={showMenu} height={totalTopMenuHeight} showMenuBottom={showMenuBottom}>
             {/* {banner && isMounted && <TopBannerContainer height={topBannerHeight}>{banner}</TopBannerContainer>} */}
             <StyledNav>
               <Flex>
