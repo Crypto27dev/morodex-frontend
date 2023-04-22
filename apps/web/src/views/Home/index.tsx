@@ -3946,7 +3946,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
                 <span className="font-bold text-buy text-glow">Until Now.</span>
               </h1>
               <div className="mt-3 ml-3 flex items-center space-x-3">
-                <a href="https://twitter.com/realSmarDex" target="_blank" rel="noreferrer">
+                <a href="https://twitter.com/morodex11" target="_blank" rel="noreferrer">
                   <svg aria-hidden="true" focusable="false" data-prefix="fab"
                     data-icon="twitter" className="svg-inline--fa fa-twitter fa-lg text-white-a5 hover-text-white"
                     role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -3955,7 +3955,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
                     </path>
                   </svg>
                 </a>
-                <a href="https://t.me/realSmarDex" target="_blank" rel="noreferrer">
+                <a href="https://t.me/morodex2" target="_blank" rel="noreferrer">
                   <svg aria-hidden="true"
                     focusable="false" data-prefix="fab" data-icon="telegram"
                     className="svg-inline--fa fa-telegram fa-lg text-white-a5 hover-text-white" role="img"
@@ -3965,7 +3965,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
                     </path>
                   </svg>
                 </a>
-                <a href="https://t.me/realSmarDexChat" target="_blank" rel="noreferrer">
+                <a href="https://t.me/morodex2" target="_blank" rel="noreferrer">
                   <svg
                     aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user-group"
                     className="svg-inline--fa fa-user-group fa-lg text-white-a5 hover-text-white" role="img"
@@ -4038,7 +4038,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
                 className="font-bold text-buy text-glow">Until Now.</span>
             </h1>
             <div className="mt-3 ml-2 flex items-center space-x-3">
-              <a href="https://twitter.com/realSmarDex"
+              <a href="https://twitter.com/morodex11"
                 target="_blank" rel="noreferrer">
                 <svg aria-hidden="true" focusable="false" data-prefix="fab"
                   data-icon="twitter" className="svg-inline--fa fa-twitter fa-lg text-white-a5 hover-text-white"
@@ -4048,7 +4048,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
                   </path>
                 </svg>
               </a>
-              <a href="https://t.me/realSmarDex" target="_blank" rel="noreferrer">
+              <a href="https://t.me/morodex2" target="_blank" rel="noreferrer">
                 <svg aria-hidden="true"
                   focusable="false" data-prefix="fab" data-icon="telegram"
                   className="svg-inline--fa fa-telegram fa-lg text-white-a5 hover-text-white" role="img"
@@ -4058,7 +4058,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
                   </path>
                 </svg>
               </a>
-              <a href="https://t.me/realSmarDexChat" target="_blank" rel="noreferrer">
+              <a href="https://t.me/morodex2Chat" target="_blank" rel="noreferrer">
                 <svg
                   aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user-group"
                   className="svg-inline--fa fa-user-group fa-lg text-white-a5 hover-text-white" role="img"
@@ -4752,7 +4752,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
           <div className="flex flex-col items-center justify-between space-y-4 lg-flex-row lg-space-y-0">
             <div className="text-sm text-white-a5">All rights reserved © 2023 MORODEX</div>
             <div className="flex items-center space-x-3">
-              <a href="https://twitter.com/realSmarDex" target="_blank"
+              <a href="https://twitter.com/morodex11" target="_blank"
                 rel="noreferrer"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter"
                   className="svg-inline--fa fa-twitter fa-lg text-white-a5 hover-text-white" role="img"
                   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -4761,7 +4761,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
                   </path>
                 </svg>
               </a>
-              <a href="https://t.me/realSmarDex" target="_blank" rel="noreferrer">
+              <a href="https://t.me/morodex2" target="_blank" rel="noreferrer">
                 <svg aria-hidden="true"
                   focusable="false" data-prefix="fab" data-icon="telegram"
                   className="svg-inline--fa fa-telegram fa-lg text-white-a5 hover-text-white" role="img"
@@ -4771,7 +4771,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
                   </path>
                 </svg>
               </a>
-              <a href="https://t.me/realSmarDexChat" target="_blank" rel="noreferrer">
+              <a href="https://t.me/morodex2" target="_blank" rel="noreferrer">
                 <svg
                   aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user-group"
                   className="svg-inline--fa fa-user-group fa-lg text-white-a5 hover-text-white" role="img"

@@ -11,6 +11,7 @@ const StyledLogo = styled(TokenLogo)<{ size: string }>`
   width: ${({ size }) => size};
   height: ${({ size }) => size};
   border-radius: 50%;
+  max-width: initial;
 `
 
 export default function CurrencyLogo({
