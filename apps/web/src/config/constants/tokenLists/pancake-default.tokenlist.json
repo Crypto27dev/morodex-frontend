@@ -52,7 +52,7 @@
     },
     {
       "name": "PancakeSwap Token",
-      "symbol": "CAKE",
+      "symbol": "MDEX",
       "address": "0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82",
       "chainId": 56,
       "decimals": 18,
@@ -116,7 +116,7 @@
     },
     {
       "name": "PancakeSwap Token",
-      "symbol": "CAKE",
+      "symbol": "MDEX",
       "address": "0xFa60D973F7642B748046464e165A65B7323b0DEE",
       "chainId": 97,
       "decimals": 18,

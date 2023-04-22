@@ -103,7 +103,7 @@
   },
   {
     "inputs": [],
-    "name": "CAKE",
+    "name": "MDEX",
     "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
     "stateMutability": "view",
     "type": "function"

@@ -3,6 +3,7 @@
 // import { useAccount } from 'wagmi'
 // import useTheme from 'hooks/useTheme'
 // import Container from 'components/Layout/Container'
+import { useMemo } from 'react'
 import { PageMeta } from 'components/Layout/Page'
 // import { useTranslation } from '@pancakeswap/localization'
 // import { useActiveChainId } from 'hooks/useActiveChainId'
@@ -18,11 +19,28 @@ import { PageMeta } from 'components/Layout/Page'
 // import { WedgeTopLeft, InnerWedgeWrapper, OuterWedgeWrapper, WedgeTopRight } from './components/WedgeSvgs'
 // import UserBanner from './components/UserBanner'
 // import MultipleBanner from './components/Banners/MultipleBanner'
+import LogChart from './components/Charts/LogChart'
+import LineChart from './components/Charts/LineChart'
+import BeamChart from './components/Charts/BeamChart'
+import {
+  useAllTokenDataSWR,
+  useProtocolChartDataSWR,
+  useProtocolDataSWR,
+  useProtocolTransactionsSWR,
+} from 'state/info/hooks'
 
 const Home: React.FC<React.PropsWithChildren> = () => {
   // const { theme } = useTheme()
   // const { address: account } = useAccount()
   // const { chainId } = useActiveChainId()
+  const locale = ("en-US");
+  const protocolData = useProtocolDataSWR()
+  const chartData = useProtocolChartDataSWR()
+  const transactions = useProtocolTransactionsSWR()
+  const currentDate = useMemo(
+    () => new Date().toLocaleString(locale, { month: 'short', year: 'numeric', day: 'numeric' }),
+    [locale],
+  )
 
   return (
     <>
@@ -1532,22 +1550,27 @@ const Home: React.FC<React.PropsWithChildren> = () => {
           }
           
           .border {
+              border: solid!important;
               border-width: 1px!important;
           }
           
           .border-2 {
+              border: solid!important;
               border-width: 2px!important;
           }
           
           .border-b {
+              border-bottom: solid!important;
               border-bottom-width: 1px!important;
           }
           
           .border-r {
+              border-right: solid!important;
               border-right-width: 1px!important;
           }
           
           .border-t {
+              border-top: solid!important;
               border-top-width: 1px!important;
           }
           
@@ -3986,14 +4009,14 @@ const Home: React.FC<React.PropsWithChildren> = () => {
             <div className="flex w-2-6 flex-col">
               <iframe
                 className="mb-8 aspect-video rounded-lg bg-buy shadow-xl shadow-buy xl-mt-14 2xl-mt-24"
-                src="https://www.youtube.com/embed/Ueo2GszRzSc?rel=0" title="SmarDex Teaser"
+                src="https://www.youtube.com/embed/Ueo2GszRzSc?rel=0" title="MoroDex Teaser"
                 allow="accelerometer; autoplay; gyroscope; web-share">
               </iframe>
               <div className="flex items-center space-x-4">
                 <div
                   className="relative flex h-24 flex-1 flex-col justify-center space-y-2 rounded-xl bg-23353C px-2 text-center shadow-xl shadow-black">
                   <div className="text-25rem font-bold text-white">$0.0045</div>
-                  <div className="absolute inset-x-1 bottom-1 text-base text-white-a6">SDEX Value</div>
+                  <div className="absolute inset-x-1 bottom-1 text-base text-white-a6">MDEX Value</div>
                 </div>
                 <div
                   className="relative flex h-24 flex-1 flex-col justify-center space-y-2 rounded-xl bg-white px-2 text-center shadow-xl shadow-black">
@@ -4083,7 +4106,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
             <div className="mt-10 mb-8 flex justify-center">
               <iframe
                 className="aspect-video rounded-lg bg-buy shadow-xl shadow-buy"
-                src="https://www.youtube.com/embed/Ueo2GszRzSc?rel=0" title="SmarDex Teaser"
+                src="https://www.youtube.com/embed/Ueo2GszRzSc?rel=0" title="MoroDex Teaser"
                 allow="accelerometer; autoplay; gyroscope; web-share">
               </iframe>
             </div>
@@ -4103,7 +4126,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
             <div
               className="relative flex h-36 w-3/4 flex-col justify-center space-y-2 rounded-xl bg-23353C px-2 text-center shadow-xl shadow-black">
               <div className="text-5xl font-bold text-white">$0.0045</div>
-              <div className="absolute inset-x-1 top-2 text-base text-white-a6">SDEX Value</div>
+              <div className="absolute inset-x-1 top-2 text-base text-white-a6">MDEX Value</div>
             </div>
           </div>
           <div className="-mt-8">
@@ -4118,12 +4141,10 @@ const Home: React.FC<React.PropsWithChildren> = () => {
           <h3 className="inline rounded-full bg-white-a15 px-4 py-2 font-actor text-xs text-white lg-text-base">Our
             core brings competitive advantage</h3>
           <h2 className="my-10 text-left font-actor text-4xl text-white">
-            SMARDEX sophisticated fine tuned algorithm
+            MORODEX sophisticated fine tuned algorithm
             transforms<br />
-            <span className="text-sell">impermanent loss</span>
-            to
-            <span className="font-semibold text-buy">impermanent gain</span>
-            <div className="mt-4 inline-block text-base lg-mt-0 lg-ml-2">
+            <span className="text-sell">impermanent loss</span> to <span className="font-semibold text-buy">impermanent gain</span>
+            {/* <div className="mt-4 inline-block text-base lg-mt-0 lg-ml-2">
               <a className="flex items-center space-x-1 rounded bg-buy px-2 py-1 text-black ring-white-a4 transition-shadow hover-ring"
                 href="/simulator">
                 <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chart-line"
@@ -4135,12 +4156,19 @@ const Home: React.FC<React.PropsWithChildren> = () => {
                 </svg>
                 <span>Simulate Our Algorithm Now</span>
               </a>
-            </div>
+            </div> */}
           </h2>
           <div className="flex flex-col items-center space-y-14 lg-flex-row lg-space-y-0 lg-space-x-8">
             <div className="w-full shrink lg-w-3-5">
-              <div
-                className="overflow-hidden rounded-xl border border-white-a5 bg-transparent shadow-xl shadow-black">
+              <div className="overflow-hidden rounded-xl border border-white-a5 bg-transparent shadow-xl shadow-black">
+                {/* <LogChart
+                  chartData={chartData}
+                  protocolData={protocolData}
+                  currentDate={currentDate}
+                  valueProperty="liquidityUSD"
+                  title={'Liquidity'}
+                  ChartComponent={LineChart}
+                /> */}
                 <div className="recharts-responsive-container" style={{ width: "100%", height: "350px" }}>
                   <div className="recharts-wrapper" role="region"
                     style={{ position: "relative", cursor: "default", width: "747px", height: "350px" }}>
@@ -4407,7 +4435,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
                           className="recharts-reference-line-line"></line>
                         <g className="text-buy text-glow-sm" fill="#00e2b6"><text x="75" y="12.312380952380941"
                           dx="592">
-                          <tspan font-size="12">SMARDEX</tspan>
+                          <tspan font-size="12">MORODEX</tspan>
                         </text><text x="75" y="12.312380952380941" dx="592" dy="12">
                             <tspan font-size="12">Impermanent</tspan>
                           </text><text x="75" y="12.312380952380941" dx="592" dy="24">
@@ -4449,7 +4477,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
                   className="flex-1 border-2 border-buy p-4 text-buy shadow-20px-3px backdrop-blur-sm"
                   href="/swap?in=eth&amp;out=sdex">
                   <div className="text-5xl">0.07<span className="text-xl">%</span></div>
-                  <div className="font-actor text-base">SMARDEX</div>
+                  <div className="font-actor text-base">MORODEX</div>
                 </a>
                   <div className="-ml-2 flex-1 border-2 border-sell p-2 pl-3 text-right text-sell">
                     <div className="text-2xl">0.3<span className="text-sm">%</span></div>
@@ -4471,9 +4499,9 @@ const Home: React.FC<React.PropsWithChildren> = () => {
         </div>
         <div className="mt-32">
           <h3 className="inline rounded-full bg-white-a15 px-4 py-2 font-actor text-xs text-white lg-text-base">
-            Compare SMARDEX with others protocols</h3>
+            Compare MORODEX with others protocols</h3>
           <div className="mt-10 w-full rounded-xl bg-white-a25 p-4 shadow-xl shadow-black lg-w-7-12">
-            <div className="font-actor text-xl leading-10 text-white">SMARDEX is revolutionizing the DeFi space by
+            <div className="font-actor text-xl leading-10 text-white">MORODEX is revolutionizing the DeFi space by
               tackling the persistent issue of impermanent loss. Our groundbreaking technology allows liquidity
               providers to earn smart returns, while giving users access to the best opportunities in the market.</div>
             <div className="mt-10 flex space-x-2">
@@ -4503,7 +4531,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
               <div className="inline-flex flex-none items-center justify-center space-x-2">
                 <img
                   className="h-10 w-10 rounded-full bg-white-a25 p-1" src="/assets/images/tokens/sdex.svg"
-                  alt="SMARDEX logo" /><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bolt"
+                  alt="MORODEX logo" /><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bolt"
                     className="svg-inline--fa fa-bolt fa-lg animate-pulse text-white" role="img"
                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                   <path fill="currentColor"
@@ -4512,6 +4540,14 @@ const Home: React.FC<React.PropsWithChildren> = () => {
                 </svg><img className="h-10 w-10 rounded-full bg-white-a25 p-1" src="/assets/images/tokens/uni.svg"
                   alt="Uniswap logo" /></div>
               <div className="grow">
+                {/* <LogChart
+                  chartData={chartData}
+                  protocolData={protocolData}
+                  currentDate={currentDate}
+                  valueProperty="liquidityUSD"
+                  title={'Liquidity'}
+                  ChartComponent={BeamChart}
+                /> */}
                 <div className="recharts-responsive-container" style={{ width: "100%", height: "200px" }}>
                   <div className="recharts-wrapper" role="region"
                     style={{ position: "relative", cursor: "default", width: "745px", height: "200px" }}>
@@ -4604,14 +4640,14 @@ const Home: React.FC<React.PropsWithChildren> = () => {
                 </div>
               </div>
               <div className="flex-none text-center font-actor text-2xl text-buy text-glow-sm">Your earnings are
-                optimized on SmarDex compared to UniSwap</div>
+                optimized on MoroDex compared to UniSwap</div>
             </div>
           </div>
         </div>
         <div className="mt-32 font-actor lg-mt-80">
           <h3 className="inline rounded-full bg-white-a15 px-4 py-2 text-xs text-white lg-text-base">Our services</h3>
           <h2 className="mt-10 mb-20 text-left text-4xl text-white">One protocol to rule them all: that is the goal of
-            SMARDEX, the pioneering DeFi platform that is transforming the way we approach trading and liquidity.</h2>
+            MORODEX, the pioneering DeFi platform that is transforming the way we approach trading and liquidity.</h2>
           <div className="flex flex-col space-y-8 lg-flex-row lg-space-y-0 lg-space-x-8 lg-px-28">
             <a className="flex-1 rounded-xl bg-white-a01 p-6 text-white-a5 shadow-xl shadow-black transition-all duration-500 hover-translate-y-4 hover-text-white hover-shadow-buy"
             href="/liquidity">
@@ -4630,7 +4666,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
               </svg>
             </div>
             <p className="py-2 text-xl font-bold leading-8 text-white-a75">No more market conditions that kill you
-              slowly with impermanent losses. SMARDEX takes care of optimizing your profits. Automatically.</p>
+              slowly with impermanent losses. MORODEX takes care of optimizing your profits. Automatically.</p>
           </a><a
             className="flex-1 rounded-xl bg-white-a01 p-6 text-white-a5 shadow-xl shadow-black transition-all duration-500 hover-translate-y-4 hover-text-white hover-shadow-buy lg-translate-y-8 lg-hover-translate-y-12"
             href="/farming">
@@ -4714,7 +4750,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
             <a href="/privacy-policy">Privacy policy</a>
           </div>
           <div className="flex flex-col items-center justify-between space-y-4 lg-flex-row lg-space-y-0">
-            <div className="text-sm text-white-a5">All rights reserved © 2023 SMARDEX</div>
+            <div className="text-sm text-white-a5">All rights reserved © 2023 MORODEX</div>
             <div className="flex items-center space-x-3">
               <a href="https://twitter.com/realSmarDex" target="_blank"
                 rel="noreferrer"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter"
