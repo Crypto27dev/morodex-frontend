@@ -662,7 +662,7 @@ export default function AddLiquidity({ currencyA, currencyB }) {
                   commonBasesType={CommonBasesType.LIQUIDITY}
                 />
                 <ColumnCenter>
-                  <AddIcon width="16px" />
+                  <AddIcon width="30px" />
                 </ColumnCenter>
                 <CurrencyInputPanel
                   showBUSD
