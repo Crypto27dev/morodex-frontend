@@ -8,7 +8,7 @@ const farms: SerializedFarmConfig[] = [
    */
   {
     pid: 0,
-    lpSymbol: 'CAKE',
+    lpSymbol: 'MDEX',
     lpAddress: '0x159df6b7689437016108a019fd5bef736bac692b6d4a1f10c941f6fbb9a74ca6::oft::CakeOFT',
     token: mainnetTokens.cake,
     quoteToken: mainnetTokens.cake,

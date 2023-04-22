@@ -4,7 +4,7 @@ export const CAKE_MAINNET = new ERC20Token(
   ChainId.BSC,
   '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82',
   18,
-  'CAKE',
+  'MDEX',
   'PancakeSwap Token',
   'https://pancakeswap.finance/',
 )
@@ -13,7 +13,7 @@ export const CAKE_TESTNET = new ERC20Token(
   ChainId.BSC_TESTNET,
   '0xFa60D973F7642B748046464e165A65B7323b0DEE',
   18,
-  'CAKE',
+  'MDEX',
   'PancakeSwap Token',
   'https://pancakeswap.finance/',
 )
