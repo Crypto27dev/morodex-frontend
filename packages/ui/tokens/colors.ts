@@ -3,7 +3,8 @@ export const baseColors = {
   failure: '#ED4B9E',
   failure33: '#ED4B9E33',
   // primary: '#1FC7D4',
-  primary: 'rgb(0, 233, 177)',
+  // primary: 'rgb(0, 233, 177)', // old theme
+  primary: 'rgb(233, 125, 154)', // new theme
   primary0f: '#1FC7D40f',
   primary3D: '#1FC7D43D',
   primaryBright: '#53DEE9',
