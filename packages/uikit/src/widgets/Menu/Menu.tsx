@@ -157,9 +157,7 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
         }}
       >
         <Wrapper>
-          <div
-            style={{position:"fixed", opacity:"0.5", inset:"0", backgroundImage:"linear-gradient(to bottom, #000, rgb(225, 102, 162)"}}>
-          </div>
+          <div style={{position:"fixed", opacity:"0.5", inset:"0", backgroundImage:"linear-gradient(to bottom, #000, rgb(225, 102, 162)"}} />
           <FixedContainer showMenu={showMenu} height={totalTopMenuHeight} showMenuBottom={showMenuBottom}>
             {/* {banner && isMounted && <TopBannerContainer height={topBannerHeight}>{banner}</TopBannerContainer>} */}
             <StyledNav>

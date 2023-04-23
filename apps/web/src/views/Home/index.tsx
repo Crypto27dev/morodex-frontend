@@ -3,7 +3,7 @@
 // import { useAccount } from 'wagmi'
 // import useTheme from 'hooks/useTheme'
 // import Container from 'components/Layout/Container'
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import { PageMeta } from 'components/Layout/Page'
 // import { useTranslation } from '@pancakeswap/localization'
 // import { useActiveChainId } from 'hooks/useActiveChainId'
@@ -33,6 +33,8 @@ const Home: React.FC<React.PropsWithChildren> = () => {
   // const { theme } = useTheme()
   // const { address: account } = useAccount()
   // const { chainId } = useActiveChainId()
+  const [usdAmount, setUsdAmount] = useState(null);
+  const [gainAmount, setGainAmount] = useState(null);
   const locale = ("en-US");
   const protocolData = useProtocolDataSWR()
   const chartData = useProtocolChartDataSWR()
@@ -41,6 +43,13 @@ const Home: React.FC<React.PropsWithChildren> = () => {
     () => new Date().toLocaleString(locale, { month: 'short', year: 'numeric', day: 'numeric' }),
     [locale],
   )
+
+  function handleUsdAmountChange(e) {
+    const inputUsdAmount = e.target.value;
+    const calcGainAmount = inputUsdAmount * (0.003 - 0.0007);
+    setUsdAmount(inputUsdAmount);
+    setGainAmount(calcGainAmount);
+  }
 
   return (
     <>
@@ -3941,11 +3950,12 @@ const Home: React.FC<React.PropsWithChildren> = () => {
           <div className="flex items-center space-x-4">
             <div className="w-4-6">
               <h1 className="font-actor text-7xl leading-none text-white">
-                DeFi Protocols
-                <br />Failed To Deliver,<br />
-                <span className="font-bold text-buy text-glow">Until Now.</span>
+              <span className="font-bold text-buy text-glow">Most Powerful</span><br />
+                DeFi Protocol<br />
+                to bring back<br />
+                cryptocurrency
               </h1>
-              <div className="mt-3 ml-3 flex items-center space-x-3">
+              <div className="mt-8 ml-3 flex items-center space-x-3">
                 <a href="https://twitter.com/morodex11" target="_blank" rel="noreferrer">
                   <svg aria-hidden="true" focusable="false" data-prefix="fab"
                     data-icon="twitter" className="svg-inline--fa fa-twitter fa-lg text-white-a5 hover-text-white"
@@ -4015,7 +4025,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
               <div className="flex items-center space-x-4">
                 <div
                   className="relative flex h-24 flex-1 flex-col justify-center space-y-2 rounded-xl bg-23353C px-2 text-center shadow-xl shadow-black">
-                  <div className="text-25rem font-bold text-white">$0.0045</div>
+                  <div className="text-25rem font-bold text-white">$0.03</div>
                   <div className="absolute inset-x-1 bottom-1 text-base text-white-a6">MDEX Value</div>
                 </div>
                 <div
@@ -4487,10 +4497,11 @@ const Home: React.FC<React.PropsWithChildren> = () => {
                 <div className="relative mt-8 flex border border-white p-2 text-white">
                   <input placeholder="0.00"
                     className="w-full bg-transparent pr-8 pt-1 pb-5 text-right text-4xl placeholder:text-white-a5 animate-pulse"
-                    type="text" value="" inputMode="numeric" />
+                    type="text" value={usdAmount} inputMode="numeric" onChange={handleUsdAmountChange} />
                   <div className="absolute bottom-8 right-2 inline-flex items-center space-x-1 text-center text-sm">USD
                   </div>
-                  <div className="absolute inset-x-2 bottom-2 text-right text-sm">Enter an amount to calculate your gain
+                  <div className="absolute inset-x-2 bottom-2 text-right text-sm">
+                    { gainAmount > 0? <span className="text-buy-500 text-glow-sm">MORODEX protocol saves you ${gainAmount}</span> : "Enter an amount to calculate your gain"}
                   </div>
                 </div>
               </div>
