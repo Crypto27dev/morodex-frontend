@@ -4017,11 +4017,14 @@ const Home: React.FC<React.PropsWithChildren> = () => {
               </div>
             </div>
             <div className="flex w-2-6 flex-col">
-              <iframe
+              {/* <iframe
                 className="mb-8 aspect-video rounded-lg bg-buy shadow-xl shadow-buy xl-mt-14 2xl-mt-24"
                 src="https://www.youtube.com/embed/Ueo2GszRzSc?rel=0" title="MoroDex Teaser"
                 allow="accelerometer; autoplay; gyroscope; web-share">
-              </iframe>
+              </iframe> */}
+              <div className='text-white-a8 text-xl text-justify' style={{marginBottom: '25px', textJustify:'inter-word'}}>
+                MoroDex is a crypto project that is released by USDFI and is a live implementation of a cutting-edge DeFi banking protocol. The protocol is designed as a universal banking layer that enables users to access several services on a single platform. From core services like staking to trading tokens to lending and borrowing a MoroDex
+              </div>
               <div className="flex items-center space-x-4">
                 <div
                   className="relative flex h-24 flex-1 flex-col justify-center space-y-2 rounded-xl bg-23353C px-2 text-center shadow-xl shadow-black">
@@ -4040,12 +4043,10 @@ const Home: React.FC<React.PropsWithChildren> = () => {
         <div className="-mt-36 flex h-screen w-auto flex-col justify-center lg-hidden">
           <div>
             <h1 className="font-actor text-4xl leading-none text-white">
-              DeFi Protocols
-              <br />
-              Failed To Deliver,
-              <br />
-              <span
-                className="font-bold text-buy text-glow">Until Now.</span>
+            <span className="font-bold text-buy text-glow">Most Powerful</span><br />
+                DeFi Protocol<br />
+                to bring back<br />
+                cryptocurrency
             </h1>
             <div className="mt-3 ml-2 flex items-center space-x-3">
               <a href="https://twitter.com/morodex11"
@@ -4113,12 +4114,13 @@ const Home: React.FC<React.PropsWithChildren> = () => {
                 <span className="font-semibold">Audit by Paladin</span>
               </a>
             </div>
-            <div className="mt-10 mb-8 flex justify-center">
-              <iframe
+            <div className="mt-10 mb-8 flex justify-center text-white-a8 text-lg text-justify" style={{overflowWrap:'break-word'}}>
+              {/* <iframe
                 className="aspect-video rounded-lg bg-buy shadow-xl shadow-buy"
                 src="https://www.youtube.com/embed/Ueo2GszRzSc?rel=0" title="MoroDex Teaser"
                 allow="accelerometer; autoplay; gyroscope; web-share">
-              </iframe>
+              </iframe> */}
+              MoroDex is a crypto project that is released by USDFI and is a live implementation of a cutting-edge DeFi banking protocol. The protocol is designed as a universal banking layer that enables users to access several services on a single platform. From core services like staking to trading tokens to lending and borrowing a MoroDex
             </div>
           </div>
         </div>
