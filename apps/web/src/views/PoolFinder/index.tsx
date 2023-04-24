@@ -30,7 +30,8 @@ const StyledButton = styled(Button)`
   background-color: ${({ theme }) => theme.colors.input};
   color: ${({ theme }) => theme.colors.text};
   box-shadow: none;
-  border-radius: 16px;
+  // border-radius: 16px;
+  border-radius: 6px;
 `
 
 export default function PoolFinder() {
