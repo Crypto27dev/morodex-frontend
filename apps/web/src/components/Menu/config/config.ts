@@ -74,7 +74,7 @@ const config: (
         // },
         // {
         //   label: t('Bridge'),
-        //   href: 'https://bridge.pancakeswap.finance/',
+        //   href: 'https://bridge.morodex.io/',
         //   type: DropdownMenuItemType.EXTERNAL_LINK,
         // },
       ].map((item) => addMenuItemSupported(item, chainId)),
@@ -190,7 +190,7 @@ const config: (
         },
         {
           label: t('Docs'),
-          href: 'https://docs.pancakeswap.finance',
+          href: 'https://docs.morodex.io',
           type: DropdownMenuItemType.EXTERNAL_LINK,
         },
       ].map((item) => addMenuItemSupported(item, chainId)),

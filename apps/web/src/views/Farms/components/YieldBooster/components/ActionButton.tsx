@@ -34,7 +34,7 @@ const BoosterTooltip = () => {
         `Boost multiplier is calculated based on the staking conditions from both Farms and fixed-term CAKE syrup pool and will be automatically updated upon user actions.`,
       )}
       <LinkExternal
-        href="https://docs.pancakeswap.finance/products/yield-farming/bcake/faq#how-are-the-bcake-multipliers-calculated"
+        href="https://docs.morodex.io/products/yield-farming/bcake/faq#how-are-the-bcake-multipliers-calculated"
         external
       >
         {t('Learn More')}

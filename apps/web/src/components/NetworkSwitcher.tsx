@@ -59,10 +59,10 @@ const NetworkSelect = ({ switchNetwork, chainId }) => {
         style={{ justifyContent: 'flex-start' }}
         as="a"
         target="_blank"
-        href="https://aptos.pancakeswap.finance/swap"
+        href="https://aptos.morodex.io/swap"
       >
         <Image
-          src="https://aptos.pancakeswap.finance/images/apt.png"
+          src="https://aptos.morodex.io/images/apt.png"
           width={24}
           height={24}
           unoptimized

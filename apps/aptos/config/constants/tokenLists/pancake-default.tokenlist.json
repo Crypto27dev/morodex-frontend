@@ -7,7 +7,7 @@
     "patch": 0
   },
   "tags": {},
-  "logoURI": "https://pancakeswap.finance/logo.png",
+  "logoURI": "https://morodex.io/logo.png",
   "keywords": ["pancake", "default", "aptos"],
   "schema": "aptos",
   "tokens": [
@@ -17,7 +17,7 @@
       "chainId": 34,
       "decimals": 8,
       "address": "0x8c805723ebc0a7fc5b7d3e7b75d567918e806b3461cb9fa21941a9edc0220bf::devnet_coins::DevnetBNB",
-      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/bnb.png"
+      "logoURI": "https://tokens.morodex.io/images/symbol/bnb.png"
     },
     {
       "name": "Bitcoin",
@@ -25,7 +25,7 @@
       "chainId": 34,
       "decimals": 8,
       "address": "0x8c805723ebc0a7fc5b7d3e7b75d567918e806b3461cb9fa21941a9edc0220bf::devnet_coins::DevnetBTC",
-      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/wbtc.png"
+      "logoURI": "https://tokens.morodex.io/images/symbol/wbtc.png"
     },
     {
       "name": "Dai",
@@ -33,7 +33,7 @@
       "chainId": 34,
       "decimals": 8,
       "address": "0x8c805723ebc0a7fc5b7d3e7b75d567918e806b3461cb9fa21941a9edc0220bf::devnet_coins::DevnetDAI",
-      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/dai.png"
+      "logoURI": "https://tokens.morodex.io/images/symbol/dai.png"
     },
     {
       "name": "Ethereum",
@@ -41,7 +41,7 @@
       "chainId": 34,
       "decimals": 8,
       "address": "0x8c805723ebc0a7fc5b7d3e7b75d567918e806b3461cb9fa21941a9edc0220bf::devnet_coins::DevnetETH",
-      "logoURI": "https://pancakeswap.finance/images/tokens/0x2170Ed0880ac9A755fd29B2688956BD959F933F8.png"
+      "logoURI": "https://morodex.io/images/tokens/0x2170Ed0880ac9A755fd29B2688956BD959F933F8.png"
     },
     {
       "name": "USD coin",
@@ -49,7 +49,7 @@
       "chainId": 34,
       "decimals": 8,
       "address": "0x8c805723ebc0a7fc5b7d3e7b75d567918e806b3461cb9fa21941a9edc0220bf::devnet_coins::DevnetUSDC",
-      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/usdc.png"
+      "logoURI": "https://tokens.morodex.io/images/symbol/usdc.png"
     },
     {
       "name": "Tether",
@@ -57,7 +57,7 @@
       "chainId": 34,
       "decimals": 8,
       "address": "0x8c805723ebc0a7fc5b7d3e7b75d567918e806b3461cb9fa21941a9edc0220bf::devnet_coins::DevnetUSDT",
-      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/usdt.png"
+      "logoURI": "https://tokens.morodex.io/images/symbol/usdt.png"
     },
     {
       "name": "BNB",
@@ -65,7 +65,7 @@
       "chainId": 2,
       "decimals": 8,
       "address": "0x8c805723ebc0a7fc5b7d3e7b75d567918e806b3461cb9fa21941a9edc0220bf::devnet_coins::DevnetBNB",
-      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/bnb.png"
+      "logoURI": "https://tokens.morodex.io/images/symbol/bnb.png"
     },
     {
       "name": "Bitcoin",
@@ -73,7 +73,7 @@
       "chainId": 2,
       "decimals": 8,
       "address": "0x8c805723ebc0a7fc5b7d3e7b75d567918e806b3461cb9fa21941a9edc0220bf::devnet_coins::DevnetBTC",
-      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/wbtc.png"
+      "logoURI": "https://tokens.morodex.io/images/symbol/wbtc.png"
     },
     {
       "name": "Dai",
@@ -81,7 +81,7 @@
       "chainId": 2,
       "decimals": 8,
       "address": "0x8c805723ebc0a7fc5b7d3e7b75d567918e806b3461cb9fa21941a9edc0220bf::devnet_coins::DevnetDAI",
-      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/dai.png"
+      "logoURI": "https://tokens.morodex.io/images/symbol/dai.png"
     },
     {
       "name": "Ethereum",
@@ -89,7 +89,7 @@
       "chainId": 2,
       "decimals": 8,
       "address": "0x8c805723ebc0a7fc5b7d3e7b75d567918e806b3461cb9fa21941a9edc0220bf::devnet_coins::DevnetETH",
-      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/weth.png"
+      "logoURI": "https://tokens.morodex.io/images/symbol/weth.png"
     },
     {
       "name": "USD coin",
@@ -97,7 +97,7 @@
       "chainId": 2,
       "decimals": 8,
       "address": "0x8c805723ebc0a7fc5b7d3e7b75d567918e806b3461cb9fa21941a9edc0220bf::devnet_coins::DevnetUSDC",
-      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/usdc.png"
+      "logoURI": "https://tokens.morodex.io/images/symbol/usdc.png"
     },
     {
       "name": "Tether USD",
@@ -105,7 +105,7 @@
       "chainId": 2,
       "decimals": 8,
       "address": "0x8c805723ebc0a7fc5b7d3e7b75d567918e806b3461cb9fa21941a9edc0220bf::devnet_coins::DevnetUSDT",
-      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/usdt.png"
+      "logoURI": "https://tokens.morodex.io/images/symbol/usdt.png"
     },
     {
       "name": "LayerZero - USD coin",
@@ -113,7 +113,7 @@
       "chainId": 1,
       "decimals": 6,
       "address": "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa::asset::USDC",
-      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/usdc.png"
+      "logoURI": "https://tokens.morodex.io/images/symbol/usdc.png"
     },
     {
       "name": "LayerZero - Tether USD",
@@ -121,7 +121,7 @@
       "chainId": 1,
       "decimals": 6,
       "address": "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa::asset::USDT",
-      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/usdt.png"
+      "logoURI": "https://tokens.morodex.io/images/symbol/usdt.png"
     },
     {
       "name": "LayerZero - Wrapped Ether",
@@ -129,7 +129,7 @@
       "chainId": 1,
       "decimals": 6,
       "address": "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa::asset::WETH",
-      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/weth.png"
+      "logoURI": "https://tokens.morodex.io/images/symbol/weth.png"
     },
     {
       "name": "Celer - USD Coin",
@@ -137,7 +137,7 @@
       "chainId": 1,
       "decimals": 6,
       "address": "0x8d87a65ba30e09357fa2edea2c80dbac296e5dec2b18287113500b902942929d::celer_coin_manager::UsdcCoin",
-      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/usdc.png"
+      "logoURI": "https://tokens.morodex.io/images/symbol/usdc.png"
     },
     {
       "name": "Celer - Tether USD",
@@ -145,7 +145,7 @@
       "chainId": 1,
       "decimals": 6,
       "address": "0x8d87a65ba30e09357fa2edea2c80dbac296e5dec2b18287113500b902942929d::celer_coin_manager::UsdtCoin",
-      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/usdt.png"
+      "logoURI": "https://tokens.morodex.io/images/symbol/usdt.png"
     },
     {
       "name": "Celer - Dai Stablecoin",
@@ -153,7 +153,7 @@
       "chainId": 1,
       "decimals": 8,
       "address": "0x8d87a65ba30e09357fa2edea2c80dbac296e5dec2b18287113500b902942929d::celer_coin_manager::DaiCoin",
-      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/dai.png"
+      "logoURI": "https://tokens.morodex.io/images/symbol/dai.png"
     },
     {
       "name": "Celer - Wrapped Ether",
@@ -161,7 +161,7 @@
       "chainId": 1,
       "decimals": 8,
       "address": "0x8d87a65ba30e09357fa2edea2c80dbac296e5dec2b18287113500b902942929d::celer_coin_manager::WethCoin",
-      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/weth.png"
+      "logoURI": "https://tokens.morodex.io/images/symbol/weth.png"
     },
     {
       "name": "Celer - Wrapped BTC",
@@ -169,7 +169,7 @@
       "chainId": 1,
       "decimals": 8,
       "address": "0x8d87a65ba30e09357fa2edea2c80dbac296e5dec2b18287113500b902942929d::celer_coin_manager::WbtcCoin",
-      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/wbtc.png"
+      "logoURI": "https://tokens.morodex.io/images/symbol/wbtc.png"
     },
     {
       "name": "Celer - Binance Coin",
@@ -177,7 +177,7 @@
       "chainId": 1,
       "decimals": 8,
       "address": "0x8d87a65ba30e09357fa2edea2c80dbac296e5dec2b18287113500b902942929d::celer_coin_manager::BnbCoin",
-      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/bnb.png"
+      "logoURI": "https://tokens.morodex.io/images/symbol/bnb.png"
     },
     {
       "name": "Celer - Binance USD",
@@ -185,7 +185,7 @@
       "chainId": 1,
       "decimals": 8,
       "address": "0x8d87a65ba30e09357fa2edea2c80dbac296e5dec2b18287113500b902942929d::celer_coin_manager::BusdCoin",
-      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/busd.png"
+      "logoURI": "https://tokens.morodex.io/images/symbol/busd.png"
     },
     {
       "name": "Wormhole - Binance USD",
@@ -193,7 +193,7 @@
       "chainId": 1,
       "decimals": 8,
       "address": "0xccc9620d38c4f3991fa68a03ad98ef3735f18d04717cb75d7a1300dd8a7eed75::coin::T",
-      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/busd.png"
+      "logoURI": "https://tokens.morodex.io/images/symbol/busd.png"
     },
     {
       "name": "Wormhole - Wrapped Ether",
@@ -201,7 +201,7 @@
       "chainId": 1,
       "decimals": 8,
       "address": "0xcc8a89c8dce9693d354449f1f73e60e14e347417854f029db5bc8e7454008abb::coin::T",
-      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/weth.png"
+      "logoURI": "https://tokens.morodex.io/images/symbol/weth.png"
     },
     {
       "name": "Wormhole - USD Coin",
@@ -209,15 +209,15 @@
       "chainId": 1,
       "decimals": 6,
       "address": "0x5e156f1207d0ebfa19a9eeff00d62a282278fb8719f4fab3a586a0a2c0fffbea::coin::T",
-      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/usdc.png"
+      "logoURI": "https://tokens.morodex.io/images/symbol/usdc.png"
     },
     {
-      "name": "PancakeSwap Token",
+      "name": "MORODEX",
       "symbol": "MDEX",
       "chainId": 1,
       "decimals": 8,
       "address": "0x159df6b7689437016108a019fd5bef736bac692b6d4a1f10c941f6fbb9a74ca6::oft::CakeOFT",
-      "logoURI": "https://tokens.pancakeswap.finance/images/aptos/0x159df6b7689437016108a019fd5bef736bac692b6d4a1f10c941f6fbb9a74ca6::oft::CakeOFT.png"
+      "logoURI": "https://tokens.morodex.io/images/aptos/0x159df6b7689437016108a019fd5bef736bac692b6d4a1f10c941f6fbb9a74ca6::oft::CakeOFT.png"
     }
   ]
 }

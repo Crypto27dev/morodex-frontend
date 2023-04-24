@@ -13,7 +13,7 @@ const GetTokenModal: React.FC<React.PropsWithChildren<Props>> = ({ currency, onD
     <Modal title={t('%symbol% required', { symbol: currency.symbol })} onDismiss={onDismiss}>
       <ModalBody maxWidth="288px">
         <Image
-          src={`https://tokens.pancakeswap.finance/images/aptos/${currency.address}.png`}
+          src={`https://tokens.morodex.io/images/aptos/${currency.address}.png`}
           width={72}
           height={72}
           margin="auto"

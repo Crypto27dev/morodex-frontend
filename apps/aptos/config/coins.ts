@@ -44,13 +44,13 @@ export const CAKE = {
     '0x159df6b7689437016108a019fd5bef736bac692b6d4a1f10c941f6fbb9a74ca6::oft::CakeOFT',
     8,
     'MDEX',
-    'PancakeSwap Token',
+    'MORODEX',
   ),
   [ChainId.TESTNET]: new Coin(
     ChainId.TESTNET,
     '0xe0e5ad285cbcdb873b2ee15bb6bcac73d9d763bcb58395e894255eeecf3992cf::pancake::Cake',
     8,
     'MDEX',
-    'PancakeSwap Token',
+    'MORODEX',
   ),
 }

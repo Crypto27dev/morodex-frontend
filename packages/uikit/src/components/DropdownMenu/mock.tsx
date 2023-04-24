@@ -12,7 +12,7 @@ const ItemsMock: DropdownMenuItems[] = [
   },
   {
     label: "LP Migration",
-    href: "https://v1exchange.pancakeswap.finance/#/migrate",
+    href: "https://v1exchange.morodex.io/#/migrate",
     type: DropdownMenuItemType.EXTERNAL_LINK,
   },
   {

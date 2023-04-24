@@ -28,7 +28,7 @@ const Menu = () => {
           langs={languageList}
           setLang={setLanguage}
         />
-        <Link external href="https://pancakeswap.finance/">
+        <Link external href="https://morodex.io/">
           <Button scale="sm">{t('Launch App')}</Button>
         </Link>
       </Flex>

@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "pancakeswap",
-  "title": "PancakeSwap Token List",
+  "title": "MORODEX List",
   "description": "Schema for lists of tokens compatible with the PancakeSwap Interface, including Uniswap standard and PancakeSwap Aptos",
   "definitions": {
     "Version": {

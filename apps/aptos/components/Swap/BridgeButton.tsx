@@ -11,7 +11,7 @@ export const bridgeInfo: BridgeInfo[] = [
   {
     platform: 'Pancake Bridge',
     symbol: 'MDEX',
-    url: 'https://bridge.pancakeswap.finance/aptos',
+    url: 'https://bridge.morodex.io/aptos',
   },
   {
     platform: 'LayerZero Bridge',

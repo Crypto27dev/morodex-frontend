@@ -17,7 +17,7 @@ export const footerLinks: FooterLinkType[] = [
     items: [
       {
         label: "Contact",
-        href: "https://docs.pancakeswap.finance/contact-us",
+        href: "https://docs.morodex.io/contact-us",
       },
       {
         label: "Blog",
@@ -25,11 +25,11 @@ export const footerLinks: FooterLinkType[] = [
       },
       {
         label: "Community",
-        href: "https://docs.pancakeswap.finance/contact-us/telegram",
+        href: "https://docs.morodex.io/contact-us/telegram",
       },
       {
         label: "MDEX",
-        href: "https://docs.pancakeswap.finance/tokenomics/cake",
+        href: "https://docs.morodex.io/tokenomics/cake",
       },
       {
         label: "—",
@@ -46,15 +46,15 @@ export const footerLinks: FooterLinkType[] = [
     items: [
       {
         label: "Customer",
-        href: "Support https://docs.pancakeswap.finance/contact-us/customer-support",
+        href: "Support https://docs.morodex.io/contact-us/customer-support",
       },
       {
         label: "Troubleshooting",
-        href: "https://docs.pancakeswap.finance/help/troubleshooting",
+        href: "https://docs.morodex.io/help/troubleshooting",
       },
       {
         label: "Guides",
-        href: "https://docs.pancakeswap.finance/get-started",
+        href: "https://docs.morodex.io/get-started",
       },
     ],
   },
@@ -67,7 +67,7 @@ export const footerLinks: FooterLinkType[] = [
       },
       {
         label: "Documentation",
-        href: "https://docs.pancakeswap.finance",
+        href: "https://docs.morodex.io",
       },
       {
         label: "Bug Bounty",
@@ -75,11 +75,11 @@ export const footerLinks: FooterLinkType[] = [
       },
       {
         label: "Audits",
-        href: "https://docs.pancakeswap.finance/help/faq#is-pancakeswap-safe-has-pancakeswap-been-audited",
+        href: "https://docs.morodex.io/help/faq#is-pancakeswap-safe-has-pancakeswap-been-audited",
       },
       {
         label: "Careers",
-        href: "https://docs.pancakeswap.finance/hiring/become-a-chef",
+        href: "https://docs.morodex.io/hiring/become-a-chef",
       },
     ],
   },

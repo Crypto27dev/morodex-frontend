@@ -48,7 +48,7 @@ const config: (t: ContextApi['t']) => ConfigMenuItemsType[] = (t) => [
       },
       {
         label: t('Bridge'),
-        href: 'https://bridge.pancakeswap.finance/aptos',
+        href: 'https://bridge.morodex.io/aptos',
         type: DropdownMenuItemType.EXTERNAL_LINK,
       },
     ],
@@ -158,7 +158,7 @@ export const Menu = ({ children }: { children: ReactNode }) => {
       activeSubItem={activeSubMenuItem?.href}
       toggleTheme={toggleTheme}
       buyCakeLabel={t('Buy CAKE')}
-      buyCakeLink="https://aptos.pancakeswap.finance/swap?outputCurrency=0x159df6b7689437016108a019fd5bef736bac692b6d4a1f10c941f6fbb9a74ca6::oft::CakeOFT"
+      buyCakeLink="https://aptos.morodex.io/swap?outputCurrency=0x159df6b7689437016108a019fd5bef736bac692b6d4a1f10c941f6fbb9a74ca6::oft::CakeOFT"
     >
       {children}
     </UIMenu>

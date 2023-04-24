@@ -33,7 +33,7 @@ const StyledSocialIcon = styled(Flex)`
   }
 `
 
-const BLOG_URL = 'https://blog.pancakeswap.finance'
+const BLOG_URL = 'https://blog.morodex.io'
 
 const SocialIcon = () => {
   const router = useRouter()

@@ -6,10 +6,10 @@ const tokens = {
     symbol: "MDEX",
     address: {
       56: "0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82",
-      97: "0xFa60D973F7642B748046464e165A65B7323b0DEE",
+      97: "0x70360225dF3dC665c547b25Fc92916f7fAc642AD",
     },
     decimals: 18,
-    projectLink: "https://pancakeswap.finance/",
+    projectLink: "https://morodex.io/",
   },
   txl: {
     symbol: "TXL",
@@ -441,7 +441,7 @@ const tokens = {
       97: "0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd",
     },
     decimals: 18,
-    projectLink: "https://pancakeswap.finance/",
+    projectLink: "https://morodex.io/",
   },
   blink: {
     symbol: "BLINK",
@@ -585,7 +585,7 @@ const tokens = {
       97: "0xfE1e507CeB712BDe086f3579d2c03248b2dB77f9",
     },
     decimals: 18,
-    projectLink: "https://pancakeswap.finance/",
+    projectLink: "https://morodex.io/",
   },
   bifi: {
     symbol: "BIFI",

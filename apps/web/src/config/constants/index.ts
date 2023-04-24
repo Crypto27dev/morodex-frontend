@@ -28,5 +28,5 @@ export const PREDICTION_TOOLTIP_DISMISS_KEY = 'prediction-switcher-dismiss-toolt
 // Gelato uses this address to define a native currency in all chains
 export const GELATO_NATIVE = '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee'
 
-export const EXCHANGE_DOCS_URLS = 'https://docs.pancakeswap.finance/products/pancakeswap-exchange'
-export const EXCHANGE_HELP_URLS = 'https://docs.pancakeswap.finance/help'
+export const EXCHANGE_DOCS_URLS = 'https://docs.morodex.io/products/pancakeswap-exchange'
+export const EXCHANGE_HELP_URLS = 'https://docs.morodex.io/help'

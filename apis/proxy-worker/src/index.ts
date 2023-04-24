@@ -17,7 +17,7 @@ router.post('/bsc-exchange', async (request, _, headers: Headers) => {
   const response = await fetch(NODE_REAL_DATA_ENDPOINT, {
     headers: {
       'X-Forwarded-For': ip,
-      origin: isLocalHost ? 'https://pancakeswap.finance' : headers.get('origin') || '',
+      origin: isLocalHost ? 'https://morodex.io' : headers.get('origin') || '',
     },
     body,
     method: 'POST',

@@ -1,4 +1,4 @@
-const PANCAKE_APTOS = 'https://tokens.pancakeswap.finance/pancakeswap-aptos.json'
+const PANCAKE_APTOS = 'https://tokens.morodex.io/pancakeswap-aptos.json'
 
 export const UNSUPPORTED_LIST_URLS: string[] = []
 

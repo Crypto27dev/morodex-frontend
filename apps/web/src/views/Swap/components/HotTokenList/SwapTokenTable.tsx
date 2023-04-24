@@ -179,7 +179,7 @@ const DataRow: React.FC<
               tokenLogoURL,
               `https://${
                 chainId === ChainId.BSC ? 'tokens.' : ''
-              }pancakeswap.finance/images/${imagePath}${address}.png`,
+              }morodex.io/images/${imagePath}${address}.png`,
             ]}
           />
           {(isXs || isSm) && <Text ml="8px">{tokenData.symbol}</Text>}
