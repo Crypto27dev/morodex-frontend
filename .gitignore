@@ -45,3 +45,6 @@ debug.log*
 # turbo
 .turbo
 .vercel
+apps/web/.firebaserc
+apps/web/firebase.json
+apps/web/.firebase
