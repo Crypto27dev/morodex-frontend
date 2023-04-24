@@ -74,7 +74,7 @@ const config: (
         // },
         // {
         //   label: t('Bridge'),
-        //   href: 'https://bridge.morodex.io/',
+        //   href: 'https://bridge.dapp-frontend-prince.web.app/',
         //   type: DropdownMenuItemType.EXTERNAL_LINK,
         // },
       ].map((item) => addMenuItemSupported(item, chainId)),
@@ -190,7 +190,7 @@ const config: (
         },
         {
           label: t('Docs'),
-          href: 'https://docs.morodex.io',
+          href: 'https://docs.dapp-frontend-prince.web.app',
           type: DropdownMenuItemType.EXTERNAL_LINK,
         },
       ].map((item) => addMenuItemSupported(item, chainId)),

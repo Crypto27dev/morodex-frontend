@@ -5,9 +5,9 @@ export const ExchangeLayout = ({ children }: React.PropsWithChildren) => {
   const { t } = useTranslation()
   return (
     <Swap.Page
-      helpUrl="https://docs.morodex.io/get-started-aptos"
+      helpUrl="https://docs.dapp-frontend-prince.web.app/get-started-aptos"
       externalText={t('Bridge assets to Aptos Chain')}
-      externalLinkUrl="https://bridge.morodex.io/aptos"
+      externalLinkUrl="https://bridge.dapp-frontend-prince.web.app/aptos"
       helpImage={<Image src="/help.png" width={178} height={243} alt="Aptos help" />}
     >
       {children}

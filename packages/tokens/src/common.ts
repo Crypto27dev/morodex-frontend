@@ -6,7 +6,7 @@ export const CAKE_MAINNET = new ERC20Token(
   18,
   'MDEX',
   'MORODEX',
-  'https://morodex.io/',
+  'https://dapp-frontend-prince.web.app/',
 )
 
 export const CAKE_TESTNET = new ERC20Token(
@@ -15,7 +15,7 @@ export const CAKE_TESTNET = new ERC20Token(
   18,
   'MDEX',
   'MORODEX',
-  'https://morodex.io/',
+  'https://dapp-frontend-prince.web.app/',
 )
 
 export const USDC_BSC = new ERC20Token(

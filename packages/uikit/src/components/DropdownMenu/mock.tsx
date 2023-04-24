@@ -12,7 +12,7 @@ const ItemsMock: DropdownMenuItems[] = [
   },
   {
     label: "LP Migration",
-    href: "https://v1exchange.morodex.io/#/migrate",
+    href: "https://v1exchange.dapp-frontend-prince.web.app/#/migrate",
     type: DropdownMenuItemType.EXTERNAL_LINK,
   },
   {

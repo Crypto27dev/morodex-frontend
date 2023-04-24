@@ -25,7 +25,7 @@ const AptosBridgeMessage = () => {
             <InlineLink
               ml="4px"
               external
-              href="https://docs.morodex.io/get-started-aptos/aptos-faq#cake-bridging"
+              href="https://docs.dapp-frontend-prince.web.app/get-started-aptos/aptos-faq#cake-bridging"
             >
               FAQ.
             </InlineLink>

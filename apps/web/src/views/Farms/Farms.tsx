@@ -462,7 +462,7 @@ const Farms: React.FC<React.PropsWithChildren> = ({ children }) => {
                 external
                 color="failure"
                 fontSize={['16px', null, '20px']}
-                href="https://v1-farms.morodex.io/farms/history"
+                href="https://v1-farms.dapp-frontend-prince.web.app/farms/history"
               >
                 {t('check out v1 farms')}.
               </FinishedTextLink>

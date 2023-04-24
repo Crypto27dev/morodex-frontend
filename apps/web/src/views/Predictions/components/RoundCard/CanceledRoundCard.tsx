@@ -38,7 +38,7 @@ const CanceledRoundCard: React.FC<React.PropsWithChildren<CanceledRoundCardProps
               {t('Round Cancelled')}
             </Text>
             {isRefundable && <ReclaimPositionButton epoch={epoch} onSuccess={handleSuccess} width="100%" my="8px" />}
-            <LinkExternal href="https://docs.morodex.io/products/prediction" external>
+            <LinkExternal href="https://docs.dapp-frontend-prince.web.app/products/prediction" external>
               {t('Learn More')}
             </LinkExternal>
           </Flex>

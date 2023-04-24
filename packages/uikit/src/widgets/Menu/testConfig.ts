@@ -162,7 +162,7 @@ export const userMenulinks: DropdownMenuItems[] = [
   },
   {
     type: DropdownMenuItemType.EXTERNAL_LINK,
-    href: "https://morodex.io",
+    href: "https://dapp-frontend-prince.web.app",
     label: "Link",
   },
   {

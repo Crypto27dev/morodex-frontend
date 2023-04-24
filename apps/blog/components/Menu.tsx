@@ -28,7 +28,7 @@ const Menu = () => {
           langs={languageList}
           setLang={setLanguage}
         />
-        <Link external href="https://morodex.io/">
+        <Link external href="https://dapp-frontend-prince.web.app/">
           <Button scale="sm">{t('Launch App')}</Button>
         </Link>
       </Flex>

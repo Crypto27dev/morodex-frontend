@@ -221,7 +221,7 @@ export const bscTokens = {
     18,
     'SYRUP',
     'SyrupBar Token',
-    'https://morodex.io/',
+    'https://dapp-frontend-prince.web.app/',
   ),
   pha: new ERC20Token(
     ChainId.BSC,

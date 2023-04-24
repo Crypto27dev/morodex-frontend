@@ -9,7 +9,7 @@ const tokens = {
       97: "0x70360225dF3dC665c547b25Fc92916f7fAc642AD",
     },
     decimals: 18,
-    projectLink: "https://morodex.io/",
+    projectLink: "https://dapp-frontend-prince.web.app/",
   },
   txl: {
     symbol: "TXL",
@@ -441,7 +441,7 @@ const tokens = {
       97: "0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd",
     },
     decimals: 18,
-    projectLink: "https://morodex.io/",
+    projectLink: "https://dapp-frontend-prince.web.app/",
   },
   blink: {
     symbol: "BLINK",
@@ -585,7 +585,7 @@ const tokens = {
       97: "0xfE1e507CeB712BDe086f3579d2c03248b2dB77f9",
     },
     decimals: 18,
-    projectLink: "https://morodex.io/",
+    projectLink: "https://dapp-frontend-prince.web.app/",
   },
   bifi: {
     symbol: "BIFI",

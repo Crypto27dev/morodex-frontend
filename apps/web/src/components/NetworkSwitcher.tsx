@@ -59,10 +59,10 @@ const NetworkSelect = ({ switchNetwork, chainId }) => {
         style={{ justifyContent: 'flex-start' }}
         as="a"
         target="_blank"
-        href="https://aptos.morodex.io/swap"
+        href="https://aptos.dapp-frontend-prince.web.app/swap"
       >
         <Image
-          src="https://aptos.morodex.io/images/apt.png"
+          src="https://aptos.dapp-frontend-prince.web.app/images/apt.png"
           width={24}
           height={24}
           unoptimized

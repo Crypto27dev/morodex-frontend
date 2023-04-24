@@ -35,8 +35,8 @@ class MyDocument extends Document {
         <Head>
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&amp;display=swap" rel="stylesheet" />
-          <link rel="shortcut icon" href="https://morodex.io/favicon.ico" />
-          <link rel="apple-touch-icon" href="https://morodex.io/logo.png" />
+          <link rel="shortcut icon" href="https://dapp-frontend-prince.web.app/favicon.ico" />
+          <link rel="apple-touch-icon" href="https://dapp-frontend-prince.web.app/logo.png" />
         </Head>
         <body>
           <noscript>

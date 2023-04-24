@@ -24,7 +24,7 @@ const Page: React.FC<
   const { chainId } = useActiveChainId()
   const isBSC = chainId === ChainId.BSC
   const externalText = isBSC ? t('Bridge assets to BNB Chain') : ''
-  const externalLinkUrl = isBSC ? 'https://bridge.morodex.io/' : ''
+  const externalLinkUrl = isBSC ? 'https://bridge.dapp-frontend-prince.web.app/' : ''
 
   return (
     <>

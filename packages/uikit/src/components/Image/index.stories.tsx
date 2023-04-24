@@ -80,7 +80,7 @@ export const TokenImages: React.FC<React.PropsWithChildren> = () => {
   return (
     <Flex flexWrap="wrap">
       {tokens.map((token) => {
-        const src = `https://morodex.io/images/tokens/${token.address[56]}.png`;
+        const src = `https://dapp-frontend-prince.web.app/images/tokens/${token.address[56]}.png`;
 
         return (
           <StyledBox key={token.symbol} p="16px">
@@ -101,8 +101,8 @@ export const TokenPairImages: React.FC<React.PropsWithChildren> = () => {
     <Flex flexWrap="wrap">
       {tokens.map((token) => {
         const randomTokenIndex = random(0, tokens.length - 1);
-        const primarySrc = `https://morodex.io/images/tokens/${token.address[56]}.png`;
-        const secondarySrc = `https://morodex.io/images/tokens/${tokens[randomTokenIndex].address[56]}.png`;
+        const primarySrc = `https://dapp-frontend-prince.web.app/images/tokens/${token.address[56]}.png`;
+        const secondarySrc = `https://dapp-frontend-prince.web.app/images/tokens/${tokens[randomTokenIndex].address[56]}.png`;
 
         return (
           <StyledBox key={token.symbol} p="16px">

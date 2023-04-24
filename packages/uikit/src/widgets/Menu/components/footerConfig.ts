@@ -7,12 +7,12 @@ export const footerLinks: (t: ContextApi["t"]) => FooterLinkType[] = (t) => [
     items: [
       {
         label: t("Contact"),
-        href: "https://docs.morodex.io/contact-us",
+        href: "https://docs.dapp-frontend-prince.web.app/contact-us",
         isHighlighted: true,
       },
       {
         label: t("Brand"),
-        href: "https://docs.morodex.io/brand",
+        href: "https://docs.dapp-frontend-prince.web.app/brand",
       },
       {
         label: t("Blog"),
@@ -20,11 +20,11 @@ export const footerLinks: (t: ContextApi["t"]) => FooterLinkType[] = (t) => [
       },
       {
         label: t("Community"),
-        href: "https://docs.morodex.io/contact-us/telegram",
+        href: "https://docs.dapp-frontend-prince.web.app/contact-us/telegram",
       },
       {
         label: t("Litepaper"),
-        href: "https://v2litepaper.morodex.io/",
+        href: "https://v2litepaper.dapp-frontend-prince.web.app/",
       },
     ],
   },
@@ -33,15 +33,15 @@ export const footerLinks: (t: ContextApi["t"]) => FooterLinkType[] = (t) => [
     items: [
       {
         label: t("Customer Support"),
-        href: "https://docs.morodex.io/contact-us/customer-support",
+        href: "https://docs.dapp-frontend-prince.web.app/contact-us/customer-support",
       },
       {
         label: t("Troubleshooting"),
-        href: "https://docs.morodex.io/help/troubleshooting",
+        href: "https://docs.dapp-frontend-prince.web.app/help/troubleshooting",
       },
       {
         label: t("Guides"),
-        href: "https://docs.morodex.io/get-started",
+        href: "https://docs.dapp-frontend-prince.web.app/get-started",
       },
     ],
   },
@@ -54,19 +54,19 @@ export const footerLinks: (t: ContextApi["t"]) => FooterLinkType[] = (t) => [
       },
       {
         label: t("Documentation"),
-        href: "https://docs.morodex.io",
+        href: "https://docs.dapp-frontend-prince.web.app",
       },
       {
         label: t("Bug Bounty"),
-        href: "https://docs.morodex.io/code/bug-bounty",
+        href: "https://docs.dapp-frontend-prince.web.app/code/bug-bounty",
       },
       {
         label: t("Audits"),
-        href: "https://docs.morodex.io/help/faq#is-pancakeswap-safe-has-pancakeswap-been-audited",
+        href: "https://docs.dapp-frontend-prince.web.app/help/faq#is-pancakeswap-safe-has-pancakeswap-been-audited",
       },
       {
         label: t("Careers"),
-        href: "https://docs.morodex.io/hiring/become-a-chef",
+        href: "https://docs.dapp-frontend-prince.web.app/hiring/become-a-chef",
       },
     ],
   },

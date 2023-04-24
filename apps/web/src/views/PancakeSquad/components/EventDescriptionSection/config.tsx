@@ -35,7 +35,7 @@ const eventDescriptionConfigBuilder = ({ t }: EventDescriptionType) => ({
     },
   ],
   primaryButton: {
-    to: 'https://docs.morodex.io/',
+    to: 'https://docs.dapp-frontend-prince.web.app/',
     text: t('View Documentation'),
     external: true,
     isDisplayed: false,

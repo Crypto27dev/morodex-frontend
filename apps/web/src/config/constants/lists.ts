@@ -1,7 +1,7 @@
-export const PANCAKE_EXTENDED = 'https://tokens.morodex.io/pancakeswap-extended.json'
-export const COINGECKO = 'https://tokens.morodex.io/coingecko.json'
+export const PANCAKE_EXTENDED = 'https://tokens.dapp-frontend-prince.web.app/pancakeswap-extended.json'
+export const COINGECKO = 'https://tokens.dapp-frontend-prince.web.app/coingecko.json'
 export const COINGECKO_ETH = 'https://tokens.coingecko.com/uniswap/all.json'
-export const CMC = 'https://tokens.morodex.io/cmc.json'
+export const CMC = 'https://tokens.dapp-frontend-prince.web.app/cmc.json'
 
 export const ETH_URLS = [COINGECKO_ETH]
 export const BSC_URLS = [PANCAKE_EXTENDED, CMC, COINGECKO]

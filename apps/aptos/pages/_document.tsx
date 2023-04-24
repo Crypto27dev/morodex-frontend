@@ -34,10 +34,10 @@ class MyDocument extends Document {
       <Html translate="no">
         <Head>
           <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <link rel="preconnect" href="https://tokens.morodex.io" />
+          <link rel="preconnect" href="https://tokens.dapp-frontend-prince.web.app" />
           <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&amp;display=swap" rel="stylesheet" />
-          <link rel="shortcut icon" href="https://morodex.io/favicon.ico" />
-          <link rel="apple-touch-icon" href="https://morodex.io/logo.png" />
+          <link rel="shortcut icon" href="https://dapp-frontend-prince.web.app/favicon.ico" />
+          <link rel="apple-touch-icon" href="https://dapp-frontend-prince.web.app/logo.png" />
         </Head>
         <body>
           <Main />

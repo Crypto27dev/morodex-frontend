@@ -13,7 +13,7 @@ interface TokenPairImageProps extends Omit<UIKitTokenPairImageProps, 'primarySrc
 
 const getImageUrlFromToken = (token: Currency) => {
   const address = token?.isNative ? token.wrapped.address : token.address
-  return `https://tokens.morodex.io/images/aptos/${address}.png`
+  return `https://tokens.dapp-frontend-prince.web.app/images/aptos/${address}.png`
 }
 
 export const TokenPairImage: React.FC<React.PropsWithChildren<TokenPairImageProps>> = ({

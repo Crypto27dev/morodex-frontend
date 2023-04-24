@@ -27,7 +27,7 @@ export const WrongNetworkModal: React.FC = () => {
           <MessageText>{t('Unable to switch network. Please try it on your wallet')}</MessageText>
         </Message>
         <StyledLink
-          href="https://docs.morodex.io/get-started-aptos/connection-guide#connect-to-aptos-mainnet"
+          href="https://docs.dapp-frontend-prince.web.app/get-started-aptos/connection-guide#connect-to-aptos-mainnet"
           external
         >
           <Button width="100%" variant="secondary">

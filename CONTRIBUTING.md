@@ -1,7 +1,7 @@
 # Contributing to the Pancake ecosystem 🥞
 
 Thanks for taking the time to contribute !
-You can start by reading our [Contribution guidelines](https://docs.morodex.io/code/contributing) first.
+You can start by reading our [Contribution guidelines](https://docs.dapp-frontend-prince.web.app/code/contributing) first.
 
 ## Setup
 

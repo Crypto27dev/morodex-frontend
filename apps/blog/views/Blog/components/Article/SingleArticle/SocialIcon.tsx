@@ -33,7 +33,7 @@ const StyledSocialIcon = styled(Flex)`
   }
 `
 
-const BLOG_URL = 'https://blog.morodex.io'
+const BLOG_URL = 'https://blog.dapp-frontend-prince.web.app'
 
 const SocialIcon = () => {
   const router = useRouter()

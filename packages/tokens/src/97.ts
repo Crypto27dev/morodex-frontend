@@ -11,7 +11,7 @@ export const bscTestnetTokens = {
     18,
     'SYRUP',
     'SyrupBar Token',
-    'https://morodex.io/',
+    'https://dapp-frontend-prince.web.app/',
   ),
   bake: new ERC20Token(
     ChainId.BSC_TESTNET,

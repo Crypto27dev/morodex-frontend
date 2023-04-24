@@ -80,7 +80,7 @@ const Menu = () => {
                 <Button
                   variant="subtle"
                   as="a"
-                  href="https://docs.morodex.io/products/prediction"
+                  href="https://docs.dapp-frontend-prince.web.app/products/prediction"
                   target="_blank"
                   rel="noreferrer noopener"
                   width="48px"

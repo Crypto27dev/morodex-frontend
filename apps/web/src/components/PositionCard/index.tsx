@@ -264,7 +264,7 @@ function MinimalPositionCardView({
                   style={{ display: 'inline' }}
                   ml="4px"
                   external
-                  href="https://docs.morodex.io/products/stableswap#stableswap-fees"
+                  href="https://docs.dapp-frontend-prince.web.app/products/stableswap#stableswap-fees"
                 >
                   {t('here.')}
                 </Link>

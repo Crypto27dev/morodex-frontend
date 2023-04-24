@@ -71,17 +71,17 @@ export const wallets: WalletConfigV2<ConnectorNames>[] = [
   {
     id: 'trustWallet',
     title: 'Trust Wallet',
-    icon: 'https://morodex.io/images/wallets/trust.png',
+    icon: 'https://dapp-frontend-prince.web.app/images/wallets/trust.png',
     get installed() {
       return typeof window !== 'undefined' && Boolean(window.aptos) && Boolean((window.aptos as any)?.isTrust)
     },
-    deepLink: 'https://link.trustwallet.com/open_url?coin_id=637&url=https://aptos.morodex.io/',
+    deepLink: 'https://link.trustwallet.com/open_url?coin_id=637&url=https://aptos.dapp-frontend-prince.web.app/',
     connectorId: ConnectorNames.TrustWallet,
   },
   {
     id: 'safePal',
     title: 'SafePal',
-    icon: 'https://morodex.io/images/wallets/safepal.png',
+    icon: 'https://dapp-frontend-prince.web.app/images/wallets/safepal.png',
     get installed() {
       return typeof window !== 'undefined' && Boolean(window.safePal) && Boolean((window.safePal as any)?.sfpPlatform)
     },

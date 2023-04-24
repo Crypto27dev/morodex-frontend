@@ -28,7 +28,7 @@ const StyledLogo = styled(TokenLogo)<{ size: string }>`
   border-radius: 50%;
 `
 
-const APT_SRCS = ['https://tokens.morodex.io/images/symbol/apt.png']
+const APT_SRCS = ['https://tokens.dapp-frontend-prince.web.app/images/symbol/apt.png']
 
 export function AptosCoinLogo({ size = '24px', style }: { size?: string; style?: React.CSSProperties }) {
   return (

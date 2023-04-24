@@ -11,7 +11,7 @@ export const swapSectionData = (t: TranslateFunction): SalesSectionProps => ({
     external: false,
   },
   secondaryButton: {
-    to: 'https://docs.morodex.io/',
+    to: 'https://docs.dapp-frontend-prince.web.app/',
     text: t('Learn'),
     external: true,
   },
@@ -35,7 +35,7 @@ export const earnSectionData = (t: TranslateFunction): SalesSectionProps => ({
     external: false,
   },
   secondaryButton: {
-    to: 'https://docs.morodex.io/products/yield-farming',
+    to: 'https://docs.dapp-frontend-prince.web.app/products/yield-farming',
     text: t('Learn'),
     external: true,
   },
@@ -61,7 +61,7 @@ export const cakeSectionData = (t: TranslateFunction): SalesSectionProps => ({
     external: false,
   },
   secondaryButton: {
-    to: 'https://docs.morodex.io/tokenomics/cake',
+    to: 'https://docs.dapp-frontend-prince.web.app/tokenomics/cake',
     text: t('Learn'),
     external: true,
   },

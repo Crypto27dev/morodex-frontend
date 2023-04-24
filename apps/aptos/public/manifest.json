@@ -2,7 +2,7 @@
   "short_name": "PancakeSwap",
   "name": "PancakeSwap",
   "description": "Farm CAKE with Pancake LP Tokens",
-  "homepage_url": "https://aptos.morodex.io",
+  "homepage_url": "https://aptos.dapp-frontend-prince.web.app",
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#1FC7D4",

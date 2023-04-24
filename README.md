@@ -1,8 +1,8 @@
 # 🥞 Pancake Frontend
 
 <p align="center">
-  <a href="https://morodex.io">
-      <img src="https://morodex.io/logo.png" height="128">
+  <a href="https://dapp-frontend-prince.web.app">
+      <img src="https://dapp-frontend-prince.web.app/logo.png" height="128">
   </a>
 </p>
 

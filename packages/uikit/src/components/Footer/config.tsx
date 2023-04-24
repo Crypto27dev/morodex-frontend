@@ -17,7 +17,7 @@ export const footerLinks: FooterLinkType[] = [
     items: [
       {
         label: "Contact",
-        href: "https://docs.morodex.io/contact-us",
+        href: "https://docs.dapp-frontend-prince.web.app/contact-us",
       },
       {
         label: "Blog",
@@ -25,11 +25,11 @@ export const footerLinks: FooterLinkType[] = [
       },
       {
         label: "Community",
-        href: "https://docs.morodex.io/contact-us/telegram",
+        href: "https://docs.dapp-frontend-prince.web.app/contact-us/telegram",
       },
       {
         label: "MDEX",
-        href: "https://docs.morodex.io/tokenomics/cake",
+        href: "https://docs.dapp-frontend-prince.web.app/tokenomics/cake",
       },
       {
         label: "—",
@@ -46,15 +46,15 @@ export const footerLinks: FooterLinkType[] = [
     items: [
       {
         label: "Customer",
-        href: "Support https://docs.morodex.io/contact-us/customer-support",
+        href: "Support https://docs.dapp-frontend-prince.web.app/contact-us/customer-support",
       },
       {
         label: "Troubleshooting",
-        href: "https://docs.morodex.io/help/troubleshooting",
+        href: "https://docs.dapp-frontend-prince.web.app/help/troubleshooting",
       },
       {
         label: "Guides",
-        href: "https://docs.morodex.io/get-started",
+        href: "https://docs.dapp-frontend-prince.web.app/get-started",
       },
     ],
   },
@@ -67,7 +67,7 @@ export const footerLinks: FooterLinkType[] = [
       },
       {
         label: "Documentation",
-        href: "https://docs.morodex.io",
+        href: "https://docs.dapp-frontend-prince.web.app",
       },
       {
         label: "Bug Bounty",
@@ -75,11 +75,11 @@ export const footerLinks: FooterLinkType[] = [
       },
       {
         label: "Audits",
-        href: "https://docs.morodex.io/help/faq#is-pancakeswap-safe-has-pancakeswap-been-audited",
+        href: "https://docs.dapp-frontend-prince.web.app/help/faq#is-pancakeswap-safe-has-pancakeswap-been-audited",
       },
       {
         label: "Careers",
-        href: "https://docs.morodex.io/hiring/become-a-chef",
+        href: "https://docs.dapp-frontend-prince.web.app/hiring/become-a-chef",
       },
     ],
   },

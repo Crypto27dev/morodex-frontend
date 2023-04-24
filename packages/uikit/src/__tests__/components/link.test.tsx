@@ -3,7 +3,7 @@ import { renderWithProvider } from "../../testHelpers";
 import { Link, LinkExternal } from "../../components/Link";
 
 it("renders link correctly", () => {
-  const { asFragment } = renderWithProvider(<Link href="https://morodex.io">Link</Link>);
+  const { asFragment } = renderWithProvider(<Link href="https://dapp-frontend-prince.web.app">Link</Link>);
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       .c0 {
@@ -36,7 +36,7 @@ it("renders link correctly", () => {
         class="c0 c1"
         color="primary"
         font-size="16px"
-        href="https://morodex.io"
+        href="https://dapp-frontend-prince.web.app"
       >
         Link
       </a>
@@ -45,7 +45,7 @@ it("renders link correctly", () => {
 });
 
 it("renders link external link correctly", () => {
-  const { asFragment } = renderWithProvider(<LinkExternal href="https://morodex.io">Link</LinkExternal>);
+  const { asFragment } = renderWithProvider(<LinkExternal href="https://dapp-frontend-prince.web.app">Link</LinkExternal>);
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       .c2 {
@@ -96,7 +96,7 @@ it("renders link external link correctly", () => {
         class="c0 c1"
         color="primary"
         font-size="16px"
-        href="https://morodex.io"
+        href="https://dapp-frontend-prince.web.app"
         rel="noreferrer noopener"
         target="_blank"
       >

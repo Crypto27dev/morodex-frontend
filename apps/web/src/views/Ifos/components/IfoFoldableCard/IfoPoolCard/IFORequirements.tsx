@@ -22,7 +22,7 @@ const NotOkNFT = ({ admissionProfile }) => {
         <>
           <LinkExternal
             style={{ display: 'inline' }}
-            href={`https://morodex.io/nfts/collections/${admissionProfile}`}
+            href={`https://dapp-frontend-prince.web.app/nfts/collections/${admissionProfile}`}
           >
             {t('Pancake Squad NFT')}
           </LinkExternal>
@@ -50,7 +50,7 @@ const NotOkProfilePoints = ({ pointThreshold }) => {
           <br />
           <LinkExternal
             style={{ display: 'inline' }}
-            href={`https://morodex.io/profile/${account}/achievements/`}
+            href={`https://dapp-frontend-prince.web.app/profile/${account}/achievements/`}
           >
             {t('Pancake Profile')}
           </LinkExternal>

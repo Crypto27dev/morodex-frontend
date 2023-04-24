@@ -130,7 +130,7 @@ const PoolStatsInfo: React.FC<React.PropsWithChildren<ExpandedFooterProps>> = ({
       )}
       {vaultKey && (
         <Flex mb="2px" justifyContent={alignLinksToRight ? 'flex-end' : 'flex-start'}>
-          <LinkExternal href="https://docs.morodex.io/products/syrup-pool/new-cake-pool" bold={false} small>
+          <LinkExternal href="https://docs.dapp-frontend-prince.web.app/products/syrup-pool/new-cake-pool" bold={false} small>
             {t('View Tutorial')}
           </LinkExternal>
         </Flex>
@@ -161,7 +161,7 @@ const PoolStatsInfo: React.FC<React.PropsWithChildren<ExpandedFooterProps>> = ({
             tokenAddress={tokenAddress}
             tokenSymbol={earningToken.symbol}
             tokenDecimals={earningToken.decimals}
-            tokenLogo={`https://tokens.morodex.io/images/${tokenAddress}.png`}
+            tokenLogo={`https://tokens.dapp-frontend-prince.web.app/images/${tokenAddress}.png`}
           />
         </Flex>
       )}

@@ -21,7 +21,7 @@ export const ConnectWalletButton = ({ children, ...props }: ButtonProps) => {
       </Button>
       <WalletModalV2
         docText={t('Learn How to Create and Connect')}
-        docLink="https://docs.morodex.io/get-started-aptos/wallet-guide"
+        docLink="https://docs.dapp-frontend-prince.web.app/get-started-aptos/wallet-guide"
         isOpen={open}
         wallets={wallets}
         login={login}
