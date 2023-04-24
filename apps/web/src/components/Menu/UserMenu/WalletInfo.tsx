@@ -75,7 +75,7 @@ const WalletInfo: React.FC<WalletInfoProps> = ({ hasLowNativeBalance, onDismiss 
           </Box>
         </Message>
       )}
-      {!isBSC && chain && (
+      {chain && (
         <Box mb="12px">
           <Flex justifyContent="space-between" alignItems="center" mb="8px">
             <Flex bg={COLORS.ETH} borderRadius="16px" pl="4px" pr="8px" py="2px">
@@ -113,35 +113,6 @@ const WalletInfo: React.FC<WalletInfoProps> = ({ hasLowNativeBalance, onDismiss 
         </Box>
       )}
       <Box mb="24px">
-        <Flex justifyContent="space-between" alignItems="center" mb="8px">
-          <Flex bg={COLORS.BNB} borderRadius="16px" pl="4px" pr="8px" py="2px">
-            <ChainLogo chainId={ChainId.BSC} />
-            <Text color="white" ml="4px">
-              BNB Smart Chain
-            </Text>
-          </Flex>
-          <LinkExternal isBscScan href={getBlockExploreLink(account, 'address', ChainId.BSC)}>
-            {getBlockExploreName(ChainId.BSC)}
-          </LinkExternal>
-        </Flex>
-        <Flex alignItems="center" justifyContent="space-between">
-          <Text color="textSubtle">BNB {t('Balance')}</Text>
-          {!bnbBalance.isFetched ? (
-            <Skeleton height="22px" width="60px" />
-          ) : (
-            <Text>{formatBigNumber(bnbBalance.data.value, 6)}</Text>
-          )}
-        </Flex>
-        {wBNBBalance.gt(0) && (
-          <Flex alignItems="center" justifyContent="space-between">
-            <Text color="textSubtle">WBNB {t('Balance')}</Text>
-            {wBNBFetchStatus !== FetchStatus.Fetched ? (
-              <Skeleton height="22px" width="60px" />
-            ) : (
-              <Text>{getFullDisplayBalance(wBNBBalance, wBNBToken.decimals, 6)}</Text>
-            )}
-          </Flex>
-        )}
         <Flex alignItems="center" justifyContent="space-between">
           <Text color="textSubtle">{t('MDEX Balance')}</Text>
           {cakeFetchStatus !== FetchStatus.Fetched ? (
