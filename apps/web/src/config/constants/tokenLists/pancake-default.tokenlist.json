@@ -53,10 +53,10 @@
     {
       "name": "MORODEX",
       "symbol": "MDEX",
-      "address": "0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82",
+      "address": "0xa64Ce8035162c3c77d49fC1b94cfa91aa84b6e60",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "/images/tokens/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82.png"
+      "logoURI": "/images/tokens/0xa64Ce8035162c3c77d49fC1b94cfa91aa84b6e60.png"
     },
     {
       "name": "Venus",
@@ -120,7 +120,7 @@
       "address": "0x70360225dF3dC665c547b25Fc92916f7fAc642AD",
       "chainId": 97,
       "decimals": 18,
-      "logoURI": "/images/tokens/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82.png"
+      "logoURI": "/images/tokens/0xa64Ce8035162c3c77d49fC1b94cfa91aa84b6e60.png"
     },
     {
       "name": "BUSD Token",
