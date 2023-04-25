@@ -10,7 +10,7 @@ const farms: SerializedFarmConfig[] = [
     pid: 0,
     v1pid: 0,
     lpSymbol: 'MDEX',
-    lpAddress: '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82',
+    lpAddress: '0xa64Ce8035162c3c77d49fC1b94cfa91aa84b6e60',
     token: bscTokens.syrup,
     quoteToken: bscTokens.wbnb,
   },

@@ -1,7 +1,7 @@
 import { JSBI, Price, ERC20Token, Percent } from '@pancakeswap/sdk'
 import getRatePercentageDifference from './getRatePercentageDifference'
 
-const CAKE = new ERC20Token(56, '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82', 18, 'MDEX', 'MORODEX')
+const CAKE = new ERC20Token(56, '0xa64Ce8035162c3c77d49fC1b94cfa91aa84b6e60', 18, 'MDEX', 'MORODEX')
 const BUSD = new ERC20Token(56, '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56', 18, 'BUSD', 'Binance USD')
 const DOGE = new ERC20Token(56, '0xbA2aE424d960c26247Dd6c32edC70B295c744C43', 8, 'DOGE', 'Binance-Peg Dogecoin')
 

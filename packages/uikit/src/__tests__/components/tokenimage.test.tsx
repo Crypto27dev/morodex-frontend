@@ -6,7 +6,7 @@ it("renders correctly", () => {
   setupMockIntersectionObserver();
   const { asFragment } = renderWithProvider(
     <TokenImage
-      src="https://dapp-frontend-prince.web.app/images/tokens/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82.svg"
+      src="https://dapp-frontend-prince.web.app/images/tokens/0xa64Ce8035162c3c77d49fC1b94cfa91aa84b6e60.svg"
       height={48}
       width={48}
     />

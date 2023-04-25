@@ -69,7 +69,7 @@ const Menu = (props) => {
         activeItem={activeMenuItem?.href}
         activeSubItem={activeSubMenuItem?.href}
         buyCakeLabel={t('Buy CAKE')}
-        buyCakeLink="https://dapp-frontend-prince.web.app/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82&chainId=56"
+        buyCakeLink="https://dapp-frontend-prince.web.app/swap?outputCurrency=0xa64Ce8035162c3c77d49fC1b94cfa91aa84b6e60&chainId=56"
         {...props}
       />
     </>
