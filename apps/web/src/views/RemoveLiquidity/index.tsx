@@ -355,7 +355,8 @@ export default function RemoveLiquidity({ currencyA, currencyB, currencyIdA, cur
     if (approval === ApprovalState.APPROVED) {
       // removeLiquidityETH
       if (oneCurrencyIsNative) {
-        methodNames = ['removeLiquidityETH', 'removeLiquidityETHSupportingFeeOnTransferTokens']
+        // methodNames = ['removeLiquidityETH', 'removeLiquidityETHSupportingFeeOnTransferTokens'] // TODO
+        methodNames = ['removeLiquidityETH']
         args = [
           currencyBIsNative ? tokenA.address : tokenB.address,
           liquidityAmount.quotient.toString(),
@@ -383,7 +384,8 @@ export default function RemoveLiquidity({ currencyA, currencyB, currencyIdA, cur
     else if (signatureData !== null) {
       // removeLiquidityETHWithPermit
       if (oneCurrencyIsNative) {
-        methodNames = ['removeLiquidityETHWithPermit', 'removeLiquidityETHWithPermitSupportingFeeOnTransferTokens']
+        // methodNames = ['removeLiquidityETHWithPermit', 'removeLiquidityETHWithPermitSupportingFeeOnTransferTokens'] // TODO
+        methodNames = ['removeLiquidityETHWithPermit']
         args = [
           currencyBIsNative ? tokenA.address : tokenB.address,
           liquidityAmount.quotient.toString(),
