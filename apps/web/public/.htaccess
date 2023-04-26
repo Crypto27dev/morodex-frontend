@@ -1,3 +1,4 @@
-RewriteEngine On
-RewriteCond %{HTTP_HOST} !^www\.domain\.ru$ [NC]
-RewriteRule ^(.*)$ http://www.domain.ru/$1 [L,R=301]
+    Options -MultiViews
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.html [QSA,L]
