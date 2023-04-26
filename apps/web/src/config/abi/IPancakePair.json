@@ -1,5 +1,10 @@
 [
   {
+    "inputs": [],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
     "anonymous": false,
     "inputs": [
       {
@@ -34,6 +39,12 @@
         "type": "address"
       },
       {
+        "indexed": true,
+        "internalType": "address",
+        "name": "to",
+        "type": "address"
+      },
+      {
         "indexed": false,
         "internalType": "uint256",
         "name": "amount0",
@@ -44,12 +55,6 @@
         "internalType": "uint256",
         "name": "amount1",
         "type": "uint256"
-      },
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "to",
-        "type": "address"
       }
     ],
     "name": "Burn",
@@ -62,6 +67,12 @@
         "indexed": true,
         "internalType": "address",
         "name": "sender",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "to",
         "type": "address"
       },
       {
@@ -90,34 +101,22 @@
         "type": "address"
       },
       {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "amount0In",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "amount1In",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "amount0Out",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "amount1Out",
-        "type": "uint256"
-      },
-      {
         "indexed": true,
         "internalType": "address",
         "name": "to",
         "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "int256",
+        "name": "amount0",
+        "type": "int256"
+      },
+      {
+        "indexed": false,
+        "internalType": "int256",
+        "name": "amount1",
+        "type": "int256"
       }
     ],
     "name": "Swap",
@@ -128,15 +127,39 @@
     "inputs": [
       {
         "indexed": false,
-        "internalType": "uint112",
+        "internalType": "uint256",
         "name": "reserve0",
-        "type": "uint112"
+        "type": "uint256"
       },
       {
         "indexed": false,
-        "internalType": "uint112",
+        "internalType": "uint256",
         "name": "reserve1",
-        "type": "uint112"
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "fictiveReserve0",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "fictiveReserve1",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "priceAverage0",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "priceAverage1",
+        "type": "uint256"
       }
     ],
     "name": "Sync",
@@ -181,32 +204,6 @@
     "type": "function"
   },
   {
-    "inputs": [],
-    "name": "MINIMUM_LIQUIDITY",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "pure",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "PERMIT_TYPEHASH",
-    "outputs": [
-      {
-        "internalType": "bytes32",
-        "name": "",
-        "type": "bytes32"
-      }
-    ],
-    "stateMutability": "pure",
-    "type": "function"
-  },
-  {
     "inputs": [
       {
         "internalType": "address",
@@ -239,7 +236,7 @@
       },
       {
         "internalType": "uint256",
-        "name": "value",
+        "name": "amount",
         "type": "uint256"
       }
     ],
@@ -258,7 +255,7 @@
     "inputs": [
       {
         "internalType": "address",
-        "name": "owner",
+        "name": "account",
         "type": "address"
       }
     ],
@@ -277,7 +274,7 @@
     "inputs": [
       {
         "internalType": "address",
-        "name": "to",
+        "name": "_to",
         "type": "address"
       }
     ],
@@ -285,12 +282,12 @@
     "outputs": [
       {
         "internalType": "uint256",
-        "name": "amount0",
+        "name": "amount0_",
         "type": "uint256"
       },
       {
         "internalType": "uint256",
-        "name": "amount1",
+        "name": "amount1_",
         "type": "uint256"
       }
     ],
@@ -307,7 +304,31 @@
         "type": "uint8"
       }
     ],
-    "stateMutability": "pure",
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "spender",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "subtractedValue",
+        "type": "uint256"
+      }
+    ],
+    "name": "decreaseAllowance",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
     "type": "function"
   },
   {
@@ -325,52 +346,75 @@
   },
   {
     "inputs": [],
-    "name": "getReserves",
+    "name": "getFees",
     "outputs": [
       {
-        "internalType": "uint112",
-        "name": "reserve0",
-        "type": "uint112"
+        "internalType": "uint256",
+        "name": "fees0_",
+        "type": "uint256"
       },
       {
-        "internalType": "uint112",
-        "name": "reserve1",
-        "type": "uint112"
-      },
-      {
-        "internalType": "uint32",
-        "name": "blockTimestampLast",
-        "type": "uint32"
+        "internalType": "uint256",
+        "name": "fees1_",
+        "type": "uint256"
       }
     ],
     "stateMutability": "view",
     "type": "function"
   },
   {
-    "inputs": [
+    "inputs": [],
+    "name": "getFictiveReserves",
+    "outputs": [
       {
-        "internalType": "address",
-        "name": "",
-        "type": "address"
+        "internalType": "uint256",
+        "name": "fictiveReserve0_",
+        "type": "uint256"
       },
       {
-        "internalType": "address",
-        "name": "",
-        "type": "address"
+        "internalType": "uint256",
+        "name": "fictiveReserve1_",
+        "type": "uint256"
       }
     ],
-    "name": "initialize",
-    "outputs": [],
-    "stateMutability": "nonpayable",
+    "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [],
-    "name": "kLast",
+    "name": "getPriceAverage",
     "outputs": [
       {
         "internalType": "uint256",
-        "name": "",
+        "name": "priceAverage0_",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "priceAverage1_",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "priceAverageLastTimestamp_",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getReserves",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "reserve0_",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "reserve1_",
         "type": "uint256"
       }
     ],
@@ -380,8 +424,114 @@
   {
     "inputs": [
       {
+        "internalType": "uint256",
+        "name": "_fictiveReserveIn",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_fictiveReserveOut",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_priceAverageLastTimestamp",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_priceAverageIn",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_priceAverageOut",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_currentTimestamp",
+        "type": "uint256"
+      }
+    ],
+    "name": "getUpdatedPriceAverage",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "priceAverageIn_",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "priceAverageOut_",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "pure",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
         "internalType": "address",
-        "name": "to",
+        "name": "spender",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "addedValue",
+        "type": "uint256"
+      }
+    ],
+    "name": "increaseAllowance",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_token0",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_token1",
+        "type": "address"
+      }
+    ],
+    "name": "initialize",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_to",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_amount0",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_amount1",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "_payer",
         "type": "address"
       }
     ],
@@ -389,7 +539,7 @@
     "outputs": [
       {
         "internalType": "uint256",
-        "name": "liquidity",
+        "name": "liquidity_",
         "type": "uint256"
       }
     ],
@@ -406,7 +556,7 @@
         "type": "string"
       }
     ],
-    "stateMutability": "pure",
+    "stateMutability": "view",
     "type": "function"
   },
   {
@@ -472,69 +622,41 @@
     "type": "function"
   },
   {
-    "inputs": [],
-    "name": "price0CumulativeLast",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "price1CumulativeLast",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
     "inputs": [
       {
         "internalType": "address",
-        "name": "to",
+        "name": "_to",
         "type": "address"
-      }
-    ],
-    "name": "skim",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "amount0Out",
-        "type": "uint256"
       },
       {
-        "internalType": "uint256",
-        "name": "amount1Out",
-        "type": "uint256"
+        "internalType": "bool",
+        "name": "_zeroForOne",
+        "type": "bool"
       },
       {
-        "internalType": "address",
-        "name": "to",
-        "type": "address"
+        "internalType": "int256",
+        "name": "_amountSpecified",
+        "type": "int256"
       },
       {
         "internalType": "bytes",
-        "name": "data",
+        "name": "_data",
         "type": "bytes"
       }
     ],
     "name": "swap",
-    "outputs": [],
+    "outputs": [
+      {
+        "internalType": "int256",
+        "name": "amount0_",
+        "type": "int256"
+      },
+      {
+        "internalType": "int256",
+        "name": "amount1_",
+        "type": "int256"
+      }
+    ],
     "stateMutability": "nonpayable",
     "type": "function"
   },
@@ -548,14 +670,7 @@
         "type": "string"
       }
     ],
-    "stateMutability": "pure",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "sync",
-    "outputs": [],
-    "stateMutability": "nonpayable",
+    "stateMutability": "view",
     "type": "function"
   },
   {
@@ -606,7 +721,7 @@
       },
       {
         "internalType": "uint256",
-        "name": "value",
+        "name": "amount",
         "type": "uint256"
       }
     ],
@@ -635,7 +750,7 @@
       },
       {
         "internalType": "uint256",
-        "name": "value",
+        "name": "amount",
         "type": "uint256"
       }
     ],
