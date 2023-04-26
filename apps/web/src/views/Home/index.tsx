@@ -4752,19 +4752,19 @@ const Home: React.FC<React.PropsWithChildren> = () => {
         </div>
         <div className="my-6 flex flex-col space-y-6 px-6 lg-px-0">
           <div
-            className="flex flex-col space-y-4 text-sm text-white hover-text-white lg-flex-row lg-space-y-0 lg-space-x-6">
+            className="flex flex-col space-y-4 text-sm text-white hover-text-white lg-flex-row lg-space-y-0 lg-space-x-8">
             <a href="/home">Home</a>
             <a href="/swap">Swap</a>
             <a href="/liquidity">Liquidity</a>
-            <a href="/farming">Farming</a>
+            {/* <a href="/farming">Farming</a>
             <a href="/staking">Staking</a>
             <a href="/simulator">Simulator</a>
-            <a href="/jobs">Jobs</a>
-            <a href="https://www.academia.edu/98332701/The_SMARDEX_Protocol_A_Novel_Solution_to_Impermanent_Loss_in_Decentralized_Finance"
+            <a href="/jobs">Jobs</a> */}
+            {/* <a href="#"
               target="_blank">Whitepaper</a>
-            <a href="https://docs.smardex.io" target="_blank">Documentation</a>
-            <a href="/terms">Terms of service</a>
-            <a href="/privacy-policy">Privacy policy</a>
+            <a href="#" target="_blank">Documentation</a>
+            <a href="#">Terms of service</a>
+            <a href="#">Privacy policy</a> */}
           </div>
           <div className="flex flex-col items-center justify-between space-y-4 lg-flex-row lg-space-y-0">
             <div className="text-sm text-white-a5">All rights reserved © 2023 MORODEX</div>
