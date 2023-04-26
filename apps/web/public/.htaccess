@@ -1,4 +1,12 @@
     Options -MultiViews
     RewriteEngine On
     RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^ index.html [QSA,L]
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^/$ index.html [QSA,L]
+    RewriteRule ^/404$ 404.html [QSA,L]
+    RewriteRule ^/451$ 451.html [QSA,L]
+    RewriteRule ^/swap$ swap.html [QSA,L]
+    RewriteRule ^/liquidity$ liquidity.html [QSA,L]
+    RewriteRule ^/find$ find.html [QSA,L]
+    RewriteRule ^/add$ add.html [QSA,L]
+    RewriteRule ^/remove$ remove.html [QSA,L]
