@@ -3817,6 +3817,27 @@ const Home: React.FC<React.PropsWithChildren> = () => {
           .hover-translate-y-4:hover {
             --tw-translate-y: -1rem!important;
           }
+          @media (min-width:640px){
+            .sm-w-80{
+                width:20rem!important;
+            }
+            .sm-w-1-2{
+                width:50%!important;
+            }
+            .sm-flex-row{
+                flex-direction:row!important;
+            }
+            .sm-space-x-4>:not([hidden])~:not([hidden]){
+                --tw-space-x-reverse:0!important;
+                margin-left:calc(1rem*(1 - var(--tw-space-x-reverse)))!important;
+                margin-right:calc(1rem*var(--tw-space-x-reverse))!important;
+            }
+        }
+            @media (min-width:768px){
+                .md:w-1-2{
+                    width:50%!important;
+                }
+            }
           @media (min-width: 1024px) {
             .lg-px-0 {
                 padding-left: 0!important;
@@ -4092,7 +4113,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
                 </svg>
               </a> */}
             </div>
-            <div className="mt-6 ml-2 inline-block text-sm">
+            {/* <div className="mt-6 ml-2 inline-block text-sm">
               <a href="https://paladinsec.co/projects/smardex/"
                 target="_blank" rel="noreferrer"
                 className="flex items-center space-x-1 rounded bg-8c6fdf px-2 py-1 text-white">
@@ -4115,7 +4136,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
                 </div>
                 <span className="font-semibold">Audit by Paladin</span>
               </a>
-            </div>
+            </div> */}
             <div className="mt-10 mb-8 flex justify-center text-white-a8 text-lg text-justify" style={{overflowWrap:'break-word'}}>
               {/* <iframe
                 className="aspect-video rounded-lg bg-buy shadow-xl shadow-buy"
@@ -4138,14 +4159,14 @@ const Home: React.FC<React.PropsWithChildren> = () => {
         <div className="mt-32 lg-hidden">
           <div>
             <div
-              className="relative flex h-36 w-3/4 flex-col justify-center space-y-2 rounded-xl bg-23353C px-2 text-center shadow-xl shadow-black">
-              <div className="text-5xl font-bold text-white">$0.0045</div>
+              className="relative flex h-36 w-3-4 flex-col justify-center space-y-2 rounded-xl bg-23353C px-2 text-center shadow-xl shadow-black">
+              <div className="text-5xl font-bold text-white">$0.03</div>
               <div className="absolute inset-x-1 top-2 text-base text-white-a6">MDEX Value</div>
             </div>
           </div>
           <div className="-mt-8">
             <div
-              className="relative float-right flex h-36 w-3/4 flex-col justify-center space-y-2 rounded-xl bg-white px-2 text-center shadow-xl shadow-black">
+              className="relative float-right flex h-36 w-3-4 flex-col justify-center space-y-2 rounded-xl bg-white px-2 text-center shadow-xl shadow-black">
               <div className="text-5xl font-bold text-black">37M</div>
               <div className="absolute inset-x-1 top-2 text-base text-black-a6">Total Value Locked</div>
             </div>
