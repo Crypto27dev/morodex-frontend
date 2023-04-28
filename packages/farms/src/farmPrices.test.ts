@@ -8,7 +8,7 @@ describe('getFarmPrices tests', () => {
         lpAddress: '0x0eD7e52944161450477ee417DE9Cd3a859b14fD0',
         token: {
           chainId: 56,
-          address: '0xa64Ce8035162c3c77d49fC1b94cfa91aa84b6e60',
+          address: '0x43018838ABca94148Fb67A9F61f8b06fAb8F76C9',
           symbol: 'Cake',
           name: 'MORODEX',
           decimals: 18,

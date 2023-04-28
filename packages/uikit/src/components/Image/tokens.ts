@@ -5,7 +5,7 @@ const tokens = {
   cake: {
     symbol: "MDEX",
     address: {
-      56: "0xa64Ce8035162c3c77d49fC1b94cfa91aa84b6e60",
+      56: "0x43018838ABca94148Fb67A9F61f8b06fAb8F76C9",
       97: "0x70360225dF3dC665c547b25Fc92916f7fAc642AD",
     },
     decimals: 18,
